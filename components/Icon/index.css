@@ -1,20 +1,29 @@
+:root {
+    --sm: 1.875em;
+    --md: 2.625em;
+    --lg: 3.75em;
+}
+
+/* Theme */
+@value themeB from "../theme.css";
+
 .icon {
     fill: currentColor;
-    color: #555;
+    color: themeB;
 }
 
 /* Sizes */
 .sm {
-    width: 1.875em;
-    height: 1.875em;
+    width: var(--sm);
+    height: var(--sm);
 }
 
 .md {
-    width: 2.625em;
-    height: 2.625em;
+    width: var(--md);
+    height: var(--md);
 }
 
 .lg {
-    width: 3.75em;
-    height: 3.75em;
+    width: var(--lg);
+    height: var(--lg);
 }
