@@ -14,10 +14,7 @@ class MainNav extends Component {
                 <nav>
                     <ul styleName="list">
                         <li styleName="item">
-                            <a href="#">view with code examples</a>
-                        </li>
-                        <li styleName="item">
-                            <a href="https://github.com/0bie/_blank">documentation</a>
+                            <a href="#">documentation</a>
                         </li>
                     </ul>
                 </nav>
