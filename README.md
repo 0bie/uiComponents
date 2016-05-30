@@ -28,3 +28,11 @@ A set of UI components built using [React](https://facebook.github.io/react/)
 - [Mocha](https://mochajs.org/)
 - [Chai](http://chaijs.com/)
 - [Enzyme](http://airbnb.io/enzyme/)
+
+#TODO:
+- [ ] Unit Tests
+- [ ] Responsive Tests
+- [ ] Support [Color functions](https://goo.gl/PWIl3H)
+- [ ] Support asset and JSON loading
+- [ ] Refactor components
+- [ ] Build more components...
