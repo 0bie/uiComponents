@@ -1,0 +1,59 @@
+{
+  "name": "uiComponents",
+  "version": "0.0.1",
+  "description": "A set of ui components built in React JS",
+  "main": "index.html",
+  "scripts": {
+    "test": "mocha --compilers js:babel-register --require test.setup.js components/**/*.spec.js",
+    "start": "webpack-dev-server --progress",
+    "clean": "rm -r ./build/*",
+    "lint": "eslint components/**/*.js && stylelint components/**/*.css",
+    "build": "NODE_ENV=production npm run lint && webpack --config ./webpack.production.config.js --progress"
+  },
+  "author": "0bie",
+  "license": "MIT",
+  "dependencies": {
+    "react": "x",
+    "react-dom": "x"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-core": "^6.4.5",
+    "babel-eslint": "^6.0.4",
+    "babel-loader": "^6.2.1",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "babel-register": "^6.8.0",
+    "chai": "x",
+    "classnames": "^2.2.4",
+    "css-loader": "^0.23.1",
+    "css-modules-require-hook": "^4.0.0",
+    "enzyme": "^2.3.0",
+    "eslint": "^2.10.1",
+    "eslint-plugin-react": "^5.1.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.17.0",
+    "json-loader": "^0.5.4",
+    "mocha": "x",
+    "postcss": "^5.0.21",
+    "postcss-cli": "^2.5.2",
+    "postcss-css-variables": "^0.5.1",
+    "postcss-custom-media": "^5.0.1",
+    "postcss-loader": "^0.9.1",
+    "postcss-nested": "^1.0.0",
+    "react-addons-test-utils": "^15.0.2",
+    "react-css-modules": "^3.7.6",
+    "react-transform-hmr": "^1.0.4",
+    "style-loader": "^0.13.1",
+    "stylelint": "^6.3.3",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0bie/uiComponents"
+  }
+}

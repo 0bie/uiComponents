@@ -1,0 +1,17 @@
+.container {
+    composes: border from "../global.css";
+    composes: center from "../global.css";
+    composes: clearBottomMd from "../global.css";
+    max-width: 85%;
+    padding: 1em;
+    overflow: hidden; /* Establish new block formatting context */
+}
+
+.title {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.description {
+    padding: 1em;
+}

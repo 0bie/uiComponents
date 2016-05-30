@@ -1,0 +1,92 @@
+.accordion {
+    padding: 1.875em 1.25em;
+}
+
+.container {
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    position: relative;
+    display: block;
+    font-size: 1rem;
+    font-weight: normal;
+    border-bottom: 0.0625em solid #eee;
+    cursor: pointer;
+
+    @media (min-width: 50em) {
+        font-size: 1.25rem;
+    }
+}
+
+.title::before,
+.title::after {
+    transition: transform 0s ease-in-out 0s;
+    position: absolute;
+    top: 5px;
+    content: "";
+    display: block;
+    height: 2px;
+    color: inherit;
+    border-left: 12px solid currentColor;
+    cursor: pointer;
+
+    @media (min-width: 50em) {
+        border-left-width: 16px;
+    }
+}
+
+.title::before {
+    transform: rotate(0.15turn);
+    right: 6px;
+
+    @media (min-width: 50em) {
+        right: 8px;
+    }
+}
+
+.title::after {
+    transform: rotate(0.85turn);
+    right: 0;
+}
+
+.section:not(:first-child) {
+    padding-top: 1.875em;
+}
+
+.content {
+    /* stylelint-disable number-zero-length-no-unit */
+
+    /* Need for transition */
+    max-height: 0vh;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.content .o-Media__container {
+    width: 100%;
+    margin-bottom: 0;
+
+    @media(min-width: 43.75em) {
+        .content .o-Media__container {
+            max-width: none;
+        }
+    }
+}
+
+/* Interaction States */
+
+.contentActive {
+    max-height: none;
+    opacity: 1;
+}
+
+.titleActive::before {
+    transform: rotate(1.35turn);
+}
+
+.titleActive::after {
+    transform: rotate(0.65turn);
+}

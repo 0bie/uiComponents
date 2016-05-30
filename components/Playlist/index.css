@@ -1,0 +1,84 @@
+.root {
+    composes: border from "../global.css";
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.playlist {
+    width: 100%;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.item:not(:last-of-type) {
+    border-bottom: 0.0625em solid #d5dde4;
+}
+
+.itemActive {
+    background: #222;
+    color: #fff;
+}
+
+.duration {
+    color: inherit;
+}
+
+.title {
+    color: inherit;
+    letter-spacing: 1px;
+}
+
+.icons {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.itemActive .icons {
+    opacity: 1;
+    visibility: visible;
+}
+
+.icons button {
+    font-size: 0.875rem;
+    margin-right: 0.625em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.icons svg {
+    fill: #fff;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background: #222;
+    opacity: 0.65;
+}
+
+.button {
+    font-size: 1rem;
+    margin: 0.625em;
+    border: 0;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.button:not(:first-of-type) svg {
+    stroke: #fff;
+}
+
+.button:first-of-type svg {
+    fill: #fff;
+}

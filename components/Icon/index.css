@@ -1,0 +1,20 @@
+.icon {
+    fill: currentColor;
+    color: #555;
+}
+
+/* Sizes */
+.sm {
+    width: 1.875em;
+    height: 1.875em;
+}
+
+.md {
+    width: 2.625em;
+    height: 2.625em;
+}
+
+.lg {
+    width: 3.75em;
+    height: 3.75em;
+}
