@@ -7,26 +7,26 @@ import './global.css';
 
 // Import individual Components
 // E.g `import ComponentName/ from './PATH/TO/Component.jsx';`
-import Accordion from './Accordion/index';
-import AccordionSection from './AccordionSection/index';
-import Card from './Card/index.js';
-import CardItem from './CardItem/index';
-import Cardlist from './Cardlist/index';
-import CardlistItem from './CardlistItem/index';
-import Carousel from './Carousel/index';
-import CarouselItem from './CarouselItem/index';
-import CommentBox from './CommentBox/index';
-import Container from './Container/index';
-import Icon from './Icon/index';
-import Loader from './Loader/index';
-import MainNav from './MainNav/index';
-import MainNavForm from './MainNavForm/index';
-import Media from './Media/index';
-import Playlist from './Playlist/index';
-import PlaylistItem from './PlaylistItem/index';
-import SubscribeForm from './SubscribeForm/index';
-import TabSet from './TabSet/index';
-import TabSection from './TabSection/index';
+import Accordion from './Accordion';
+import AccordionSection from './AccordionSection';
+import Card from './Card';
+import CardItem from './CardItem';
+import Cardlist from './Cardlist';
+import CardlistItem from './CardlistItem';
+import Carousel from './Carousel';
+import CarouselItem from './CarouselItem';
+import CommentBox from './CommentBox';
+import Container from './Container';
+import Icon from './Icon';
+import MainNav from './MainNav';
+import MainNavForm from './MainNavForm';
+import Media from './Media';
+import Playlist from './Playlist';
+import PlaylistItem from './PlaylistItem';
+import SubscribeForm from './SubscribeForm';
+import Spinner from './Spinner';
+import TabSet from './TabSet';
+import TabSection from './TabSection';
 
 // Define constants for each Component
 // E.g `const variableName = document.getElementById('dom-node');`
@@ -39,8 +39,9 @@ const carousel = document.getElementById('carousel');
 const commentBox = document.getElementById('commentbox');
 const container = document.getElementById('container');
 const icon = document.getElementById('icon');
-const loader = document.getElementById('loader');
+const spinner = document.getElementById('spinner');
 const mainNav = document.getElementById('nav');
+const media = document.getElementById('media');
 const playlist = document.getElementById('playlist');
 const subscribeform = document.getElementById('subscribeform');
 const tabset = document.getElementById('tabset');
@@ -49,9 +50,11 @@ const tabset = document.getElementById('tabset');
 // Render each Component to the DOM
 // E.g `render(<Component/>, dom-node);`
 
-render(<MainNav>
-  <MainNavForm />
-</MainNav>, nav);
+render(
+    <MainNav>
+        <MainNavForm />
+    </MainNav>, nav
+);
 
 // render(<Container title="Test Title" description="This is where your description will go..."/>, container);
 
@@ -61,31 +64,31 @@ render(
             <li>A description of the accordion component.</li>
             <li>Its usage and supported props</li>
             <li>...</li>
-        </ul>
+            </ul>
         }>
             <Accordion>
                 <AccordionSection title="Accordion Title 1">
-                    <Media title="Media Title 1">
+                    <Media>
                         <Icon name="media1" title="media icon" desc="a media icon"/>
                     </Media>
                 </AccordionSection>
                 <AccordionSection title="Accordion Title 2">
-                    <Media title="Media Title 2">
+                    <Media>
                         <Icon name="media1" title="media icon" desc="a media icon"/>
                     </Media>
                 </AccordionSection>
                 <AccordionSection title="Accordion Title 3">
-                    <Media title="Media Title 3">
+                    <Media>
                         <Icon name="media1" title="media icon" desc="a media icon"/>
                     </Media>
                 </AccordionSection>
                 <AccordionSection title="Accordion Title 4">
-                    <Media title="Media Title 4">
+                    <Media>
                         <Icon name="media1" title="media icon" desc="a media icon"/>
                     </Media>
                 </AccordionSection>
                 <AccordionSection title="Accordion Title 5">
-                    <Media title="Media Title 5">
+                    <Media>
                         <Icon name="media1" title="media icon" desc="a media icon"/>
                     </Media>
                 </AccordionSection>
@@ -99,7 +102,7 @@ render(
             <li>A description of the card component.</li>
             <li>Its usage and supported props</li>
             <li>...</li>
-        </ul>
+            </ul>
         }>
             <Card title="Card Title" footer>
                 <CardItem/>
@@ -113,7 +116,7 @@ render(
             <li>A description of the card component.</li>
             <li>Its usage and supported props</li>
             <li>...</li>
-        </ul>
+            </ul>
         }>
             <Card title="Card Title">
                 <Media title="Media Title">
@@ -129,7 +132,7 @@ render(
             <li>A description of the card component.</li>
             <li>Its usage and supported props</li>
             <li>...</li>
-        </ul>
+            </ul>
         }>
             <Card title="Card Title" />
     </Container>, card_3
@@ -141,7 +144,7 @@ render(
             <li>A description of the cardlist component.</li>
             <li>Its usage and supported props</li>
             <li>...</li>
-        </ul>
+            </ul>
         }>
             <Cardlist>
                 <CardlistItem title="Card Title" subtitle="Card Subtitle/Author" details="extra details..." image="black.jpg">
@@ -175,27 +178,27 @@ render(
             <li>A description of the carousel component.</li>
             <li>Its usage and supported props</li>
             <li>...</li>
-        </ul>
+            </ul>
         }>
             <Carousel>
                 <CarouselItem>
-                    <Media title="Media Title 1">
-                    <Icon name="media1" title="media icon" desc="a media icon"/>
+                    <Media>
+                    <Icon name="media1" title="media icon" desc="a media icon" color="teal" />
                     </Media>
                 </CarouselItem>
                 <CarouselItem>
                     <Media title="Media Title 2">
-                    <Icon name="media1" title="media icon" desc="a media icon"/>
+                    <Icon name="media1" title="media icon" desc="a media icon" color="peach" />
                     </Media>
                 </CarouselItem>
                 <CarouselItem>
                     <Media title="Media Title 3">
-                    <Icon name="media1" title="media icon" desc="a media icon"/>
+                    <Icon name="media1" title="media icon" desc="a media icon" color="olive" />
                     </Media>
                 </CarouselItem>
                 <CarouselItem>
                     <Media title="Media Title 4">
-                    <Icon name="media1" title="media icon" desc="a media icon"/>
+                    <Icon name="media1" title="media icon" desc="a media icon" color="indianred" />
                     </Media>
                 </CarouselItem>
             </Carousel>
@@ -209,22 +212,10 @@ render(
             <li>A description of the comment box component.</li>
             <li>Its usage and supported props</li>
             <li>...</li>
-        </ul>
+            </ul>
         }>
             <CommentBox/>
     </Container>, commentBox
-);
-
-render(
-    <Container title="loader"
-    description={<ul>
-        <li>A description of the loader component.</li>
-        <li>Its usage and supported props</li>
-        <li>...</li>
-    </ul>
-    }>
-        <Loader size="md"/>
-    </Container>, loader
 );
 
 render(
@@ -233,7 +224,7 @@ render(
         <li>A description of the playlist component.</li>
         <li>Its usage and supported props</li>
         <li>...</li>
-    </ul>
+        </ul>
     }>
         <Playlist>
             <PlaylistItem title="Song Title 1" artist="Artist 1" duration="3:50"/>
@@ -247,12 +238,24 @@ render(
 );
 
 render(
-    <Container title="subscribe form"
+    <Container title="spinner"
     description={<ul>
-        <li>A description of the loader component.</li>
+        <li>A description of the spinner component.</li>
         <li>Its usage and supported props</li>
         <li>...</li>
-    </ul>
+        </ul>
+    }>
+        <Spinner size="md" />
+    </Container>, spinner
+);
+
+render(
+    <Container title="subscribe form"
+    description={<ul>
+        <li>A description of the subscribe form component.</li>
+        <li>Its usage and supported props</li>
+        <li>...</li>
+        </ul>
     }>
         <SubscribeForm />
     </Container>, subscribeform
@@ -264,7 +267,7 @@ render(
         <li>A description of the tab set component.</li>
         <li>Its usage and supported props</li>
         <li>...</li>
-    </ul>
+        </ul>
     }>
         <TabSet>
             <TabSection title="a">
@@ -297,8 +300,22 @@ render(
         <li>A description of the icon component.</li>
         <li>Its usage and supported props</li>
         <li>...</li>
-    </ul>
+        </ul>
     }>
         <Icon name='facebook' title='facebook Icon' desc='A facebook Icon' color="#3b5998" size="lg" />
     </Container>, icon
+);
+
+render(
+    <Container title="media"
+    description={<ul>
+        <li>A description of the media component.</li>
+        <li>Its usage and supported props</li>
+        <li>...</li>
+        </ul>
+    }>
+        <Media>
+            <Icon name="media1" title="media icon" desc="a media icon" size="md" />
+        </Media>
+    </Container>, media
 );
