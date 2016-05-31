@@ -1,31 +1,29 @@
 import React, { PropTypes } from 'react';
+import data from './data.json';
 import CSSModules from 'react-css-modules';
 import styles from './index.css';
 
 class Media extends React.Component {
     static propTypes = {
-        title: PropTypes.node.isRequired,
+        title: PropTypes.node,
+        description: PropTypes.node,
         children: PropTypes.node
     };
     static defaultProps = {
-        title: ''
+        title: data.title,
+        description: data.description
     };
     render() {
-        const { children, title} = this.props;
+        const { children, title, description, ...props } = this.props;
         return (
-            <div styleName="container">
-            <div styleName="Media">
+            <div styleName="root" {...props}>
                 <div styleName="item">
                     {children}
                 </div>
                 <div styleName="content">
-                    <h4 styleName="title">{title}</h4>
-                    <div styleName="desc">
-                      The content area on the right can contain any other objects. In this case, it contains text, but we could put lists, grids, or even other media objects inside.<br/>
-                      - <a href="http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/">Nicole Sullivan</a>
-                    </div>
+                    {title ? <h4 styleName="title">{title}</h4> : null}
+                    {description ? <div styleName="desc">{description}</div> : null}
                 </div>
-            </div>
             </div>
         );
     }

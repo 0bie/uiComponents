@@ -1,11 +1,4 @@
-.Media {
-    /*
-     * Establish a new block formatting context to contain floated media elements *(https://www.w3.org/TR/css3-box/#block-level0)
-     */
-    overflow: hidden;
-}
-
-.container {
+.root {
     /*
      * Establish new stacking context to contain footer (LN:70)
      * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
@@ -73,7 +66,7 @@
 }
 
 .desc {
-    overflow: visible;
+    padding-top: 1em;
 }
 
 .o-Media__footer.u-flyOut {
