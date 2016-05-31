@@ -136,14 +136,14 @@ input:focus:-ms-input-placeholder {
 /**
  * Establish a new block formatting context *(https://www.w3.org/TR/css3-box/#block-level0)
  */
-.u-nbfc {
+.nbfc {
     overflow: hidden;
 }
 
 /**
  * Establish a new block formatting context to contain elements that may lead to reflow/repaint due to properties such as : animations, transitions, transforms etc..
  */
-.u-nbfc_A {
+.nbfc_A {
     position: absolute;
 }
 
@@ -154,17 +154,17 @@ input:focus:-ms-input-placeholder {
  * Use to contain floated elements and establish a new block formatting context
  *http://fuseinteractive.ca/blog/understanding-humble-clearfix#.Vrax2rkrKoY
  */
-.u-cf {
+.cf {
     *zoom: 1;
 }
 
-.u-cf:before,
-.u-cf:after {
+.cf:before,
+.cf:after {
     content: " ";
     display: table;
 }
 
-.u-cf:after {
+.cf:after {
     clear: both;
 }
 
@@ -182,17 +182,17 @@ input:focus:-ms-input-placeholder {
 /**
  * Element is present to the user & assistive technologies
  */
-.u-isRevealed {
+.isRevealed {
     display: block !important;
     visibility: visible;
 }
 
-.u-isHidden {
+.isHidden {
     opacity: 0;
     visibility: hidden;
 }
 
-.u-isVisible {
+.isVisible {
     opacity: 1;
     visibility: visible;
 }
@@ -200,11 +200,11 @@ input:focus:-ms-input-placeholder {
 /* ############
    Layout Utils
    ############*/
-.u-fl {
+.fl {
     float: left;
 }
 
-.u-fr {
+.fr {
     float: right;
 }
 
@@ -227,18 +227,18 @@ input:focus:-ms-input-placeholder {
     border-color: #e5e6e9 #dfe0e4 #d0d1d5;
 }
 
-.u-hardShadow {
+.hardShadow {
     box-shadow: 0 0.0625em 0.125em rgba(0, 0, 0, 0.5);
 }
 
-.u-softShadow {
+.softShadow {
     box-shadow: 0 0.0625em 0.25em 0 rgba(0, 0, 0, 0.2);
 }
 
 /* ###########
    Text Utils
    ###########*/
-.u-alignRight {
+.alignRight {
     text-align: right;
 }
 
@@ -249,7 +249,7 @@ input:focus:-ms-input-placeholder {
 /**
  * Prevent text from wrapping or breaking onto a new line
  */
-.u-ellipses {
+.ellipses {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -260,14 +260,15 @@ input:focus:-ms-input-placeholder {
    ###########*/
 /**
  * Establish a ratio aware video container
+ * TODO: 4:3
  */
-.u-videoContainer {
+.videoContainer {
     padding-top: 56.25%;
     position: relative;
 }
 
-.u-videoContainer video,
-.u-videoContainer iframe {
+.videoContainer video,
+.videoContainer iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -289,10 +290,6 @@ input:focus:-ms-input-placeholder {
 }
 
 .clearBottomLg {
-    margin-bottom: 25em;
-}
-
-.clear-bottom_tab {
     margin-bottom: 25em;
 }
 
