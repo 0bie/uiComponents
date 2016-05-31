@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha --compilers js:babel-register --require test.setup.js components/**/*.spec.js",
     "start": "webpack-dev-server --progress",
-    "clean": "rm -r ./build/*",
+    "clean": "rm -rf ./build/*",
     "lint": "eslint components/**/*.js && stylelint components/**/*.css",
     "build": "NODE_ENV=production npm run clean && npm run lint && webpack --config ./webpack.production.config.js --progress"
   },
