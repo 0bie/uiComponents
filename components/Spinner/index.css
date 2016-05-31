@@ -44,9 +44,9 @@
     width: var(--lg);
 }
 
-/* Loader */
+/* Spinner */
 
-.loader {
+.spinner {
     position: relative;
 
     &::before {

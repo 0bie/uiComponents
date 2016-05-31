@@ -3,7 +3,7 @@ import CSSModules from 'react-css-modules';
 import styles from './index.css';
 import g from '../global.css';
 
-class Loader extends Component {
+class Spinner extends Component {
     static propTypes = {
         size: PropTypes.oneOf(['sm', 'md', 'lg'])
     }
@@ -14,7 +14,7 @@ class Loader extends Component {
         const {size, ...props} = this.props;
         return (
             <div styleName={size} className={g.center}>
-                <div styleName="loader" {...props}>
+                <div styleName="spinner" {...props}>
                     <svg styleName="circle" viewBox="25 25 50 50">
                      <circle styleName="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
                     </svg>
@@ -24,4 +24,4 @@ class Loader extends Component {
     }
 }
 
-export default CSSModules(Loader, styles);
+export default CSSModules(Spinner, styles);
