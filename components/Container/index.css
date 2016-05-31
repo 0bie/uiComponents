@@ -2,6 +2,7 @@
     composes: border from "../global.css";
     composes: center from "../global.css";
     composes: clearBottomMd from "../global.css";
+    composes: nbfc from "../global.css";
     max-width: 85%;
     padding: 1em;
     overflow: hidden; /* Establish new block formatting context */
