@@ -54,11 +54,6 @@
     box-shadow: 0 0 0.625em 0.25em rgba(0, 0, 0, 0.1);
 }
 
-img {
-    display: block;
-    width: 100%;
-}
-
 .options {
     /*
      * New block formatting context to avoid reflow when display property is changed  (LN:98)
