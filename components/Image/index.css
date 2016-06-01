@@ -1,0 +1,40 @@
+:root {
+    --xsm: 32px;
+    --sm: 64px;
+    --md: 128px;
+    --lg: 256px;
+    --xl: 612px;
+}
+
+.root {
+    position: relative;
+    display: inline-block;
+}
+
+/* Sizes */
+
+.xsm {
+    width: var(--xsm);
+}
+
+.sm {
+    width: var(--sm);
+}
+
+.md {
+    width: var(--md);
+}
+
+.lg {
+    width: var(--lg);
+}
+
+.xl {
+    width: var(--xl);
+}
+
+/* Shape */
+
+.circle {
+    border-radius: 100%;
+}

@@ -18,6 +18,7 @@ import CarouselItem from './CarouselItem';
 import CommentBox from './CommentBox';
 import Container from './Container';
 import Icon from './Icon';
+import Image from './Image';
 import MainNav from './MainNav';
 import MainNavForm from './MainNavForm';
 import Media from './Media';
@@ -39,6 +40,7 @@ const carousel = document.getElementById('carousel');
 const commentBox = document.getElementById('commentbox');
 const container = document.getElementById('container');
 const icon = document.getElementById('icon');
+const image = document.getElementById('image');
 const spinner = document.getElementById('spinner');
 const mainNav = document.getElementById('nav');
 const media = document.getElementById('media');
@@ -318,4 +320,20 @@ render(
             <Icon name="media1" title="media icon" desc="a media icon" size="md" />
         </Media>
     </Container>, media
+);
+
+render(
+    <Container title="image"
+    description={<ul>
+        <li>A description of the image component.</li>
+        <li>Its usage and supported props</li>
+        <li>...</li>
+        </ul>
+    }>
+        <Image src="assets/yellow.jpg" size="xsm" alt="placeholder text"/>
+        <Image src="assets/orange.jpg" size="sm" alt="placeholder text"/>
+        <Image src="assets/blue.jpg" size="md" alt="placeholder text"/>
+        <Image src="assets/black.jpg" size="lg" alt="placeholder text"/>
+        <Image src="assets/yellow.jpg" size="xl" shape="circle" alt="placeholder text"/>
+    </Container>, image
 );
