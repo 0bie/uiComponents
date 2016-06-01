@@ -38,6 +38,11 @@ video {
     height: auto;
 }
 
+img {
+    display: block;
+    width: 100%;
+}
+
 main {
     margin-top: 5em;
 }
