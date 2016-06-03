@@ -22,7 +22,7 @@
 .item {
     padding: 1.25em;
 
-    @media (min-width: 30em) {
+    @media (min-width: 42.5em) {
         width: calc(50% - 1.25em);
         margin-right: 1.25em;
         float: left;
