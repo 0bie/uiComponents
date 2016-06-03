@@ -19,6 +19,8 @@ import CommentBox from './CommentBox';
 import Container from './Container';
 import Icon from './Icon';
 import Image from './Image';
+import List from './List';
+import ListItem from './ListItem';
 import MainNav from './MainNav';
 import MainNavForm from './MainNavForm';
 import Media from './Media';
@@ -41,6 +43,7 @@ const commentBox = document.getElementById('commentbox');
 const container = document.getElementById('container');
 const icon = document.getElementById('icon');
 const image = document.getElementById('image');
+const list = document.getElementById('list');
 const spinner = document.getElementById('spinner');
 const mainNav = document.getElementById('nav');
 const media = document.getElementById('media');
@@ -334,4 +337,42 @@ render(
         <Image src="assets/orange.jpg" size="md" shape="circle" alt="placeholder text"/>
         <Image src="assets/yellow.jpg" size="lg" shape="circle" alt="placeholder text"/>
     </Container>, image
+);
+
+render(
+    <Container title="list"
+    description={<ul>
+        <li>A description of the list component.</li>
+        <li>Its usage and supported props</li>
+        <li>...</li>
+        </ul>
+    }>
+        <List>
+            <ListItem>
+                <Media>
+                    <Image size="xsm" shape="circle" src="assets/blue.jpg" />
+                </Media>
+            </ListItem>
+            <ListItem>
+                <Media>
+                    <Image size="xsm" shape="circle" src="assets/yellow.jpg" />
+                </Media>
+            </ListItem>
+            <ListItem>
+                <Media>
+                    <Image size="xsm" shape="circle" src="assets/black.jpg" />
+                </Media>
+            </ListItem>
+            <ListItem>
+                <Media>
+                    <Image size="xsm" shape="circle" src="assets/orange.jpg" />
+                </Media>
+            </ListItem>
+            <ListItem>
+                <Media>
+                    <Image size="xsm" shape="circle" src="assets/blue.jpg" />
+                </Media>
+            </ListItem>
+        </List>
+    </Container>, list
 );

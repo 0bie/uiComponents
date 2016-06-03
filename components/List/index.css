@@ -1,0 +1,18 @@
+.root {
+    border: 1px solid #dbdbdb;
+}
+
+.item {
+    transition: background-color 0.3s ease-in-out; 
+    padding: 0.5em;
+}
+
+.item:hover {
+    background-color: #f7f7f5;
+    cursor: pointer;
+}
+
+.item:not(:last-child) {
+    border: 0 solid #dbdbdb;
+    border-bottom-width: 1px;
+}
