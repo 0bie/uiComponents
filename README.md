@@ -11,7 +11,7 @@ A set of UI components built using [React](https://facebook.github.io/react/)
 
 - Dev Server: `npm start`
 
-- Visit [localhost:8080](http://localhost:8080)
+    - Visit [localhost:8080](http://localhost:8080)
 
 - Lint: `npm run lint`
 
