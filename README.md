@@ -4,13 +4,16 @@ A set of UI components built using [React](https://facebook.github.io/react/)
 
 ## Development
 
-- Install: `npm install`
+- Install:
+
+    - `git clone https://github.com/0bie/uiComponents.git`
+    - `cd uiComponents && npm install`
 
 - Dev Server: `npm start`
 
-- Lint: `npm run lint`
-
 - Visit [localhost:8080](http://localhost:8080)
+
+- Lint: `npm run lint`
 
 ## Production
 
