@@ -22,7 +22,7 @@ class Media extends React.Component {
                 </div>
                 <div styleName="content">
                     {title ? <h4 styleName="title">{title}</h4> : null}
-                    {description ? <div styleName="desc">{description}</div> : null}
+                    {description ? <div>{description}</div> : null}
                 </div>
             </div>
         );
