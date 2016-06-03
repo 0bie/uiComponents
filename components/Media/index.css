@@ -5,14 +5,11 @@
      */
     position: relative;
     z-index: 20;
+
+    display: flex;
     overflow: hidden;
-    width: 85%;
     margin-left: auto;
     margin-right: auto;
-
-    @media (min-width: 43.75em) {
-        max-width: 70%;
-    }
 }
 
 .title {
@@ -20,13 +17,10 @@
 }
 
 .item {
+    flex: 0.5;
+    align-self: center;
     padding: 1.25em;
-
-    @media (min-width: 42.5em) {
-        width: calc(50% - 1.25em);
-        margin-right: 1.25em;
-        float: left;
-    }
+    margin-right: 1.25em;
 }
 
 .item img {
@@ -41,12 +35,9 @@
 }
 
 .content {
-    padding: 1.25em;
-
-    @media (min-width: 30em) {
-        width: calc(50% - 1.25em);
-        float: left;
-    }
+    flex: 1 0 80%;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
 }
 
 .footer {
