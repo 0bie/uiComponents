@@ -16,7 +16,7 @@
 }
 
 .foot {
-    composes: border from '../global.css';
+    composes: border from "../global.css";
     padding: 0.875em;
     text-align: center;
 }
