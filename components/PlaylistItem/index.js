@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 import CSSModules from 'react-css-modules';
 import styles from '../Playlist/index.css';
-import Icon from '../Icon/index.js';
+import renderIcons from '../utils/renderIcons';
 
 class PlaylistItem extends Component {
     static propTypes = {
@@ -10,26 +10,25 @@ class PlaylistItem extends Component {
         duration: PropTypes.string,
         isActive: PropTypes.bool,
         isPlay: PropTypes.bool,
+        icons: PropTypes.array,
         styles: PropTypes.object,
         children: PropTypes.node
     }
-
+    static defaultProps = {
+        icons:[
+            {name: 'fave3', title: 'Favorite icon', desc: 'a favorite button', color: '#fff', size: 'sm'},
+            {name: 'share', title: 'Share icon', desc: 'a share button', color: '#fff', size: 'sm'},
+            {name: 'volumeMute', title: 'Mute icon', desc: 'a mute button', color: '#fff', size: 'sm'}
+        ]
+    }
     render() {
-        const {title, artist, duration, isActive, isPlay, styles} = this.props;
+        const {title, artist, duration, icons, isActive, isPlay, styles} = this.props;
         const activeItem = isActive && isPlay ? styles['itemActive'] : '';
         return (
             <li styleName="item" className={activeItem}>
                 <span styleName="title">{title} &nbsp;&nbsp;- &nbsp;&nbsp; {artist}</span>
                 <span styleName="icons">
-                    <button>
-                        <Icon name="fave3" title="stop icon" desc="a favorite button" size="sm"/>
-                    </button>
-                    <button>
-                        <Icon name="share" title="share icon" desc="a share button" size="sm"/>
-                    </button>
-                    <button>
-                        <Icon name="volumeMute" title="stop icon" desc="a mute button" size="sm"/>
-                    </button>
+                    {renderIcons(icons)}
                 </span>
                 <span styleName="duration">{duration}</span>
             </li>

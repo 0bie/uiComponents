@@ -78,8 +78,12 @@
     }
 }
 
-.o-Icon {
-    fill: #fff;
+.options button {
+    font: inherit;
+    background: transparent;
+    border: 0;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .desc {

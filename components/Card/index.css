@@ -84,8 +84,12 @@
     padding: 0.25em 0.75em;
 }
 
-.footer .o-Icon {
-    fill: #fff;
+.footer button {
+    font: inherit;
+    padding-left: 1em;
+    padding-right: 1em;
+    background: transparent;
+    border: 0;
 }
 
 .desc {

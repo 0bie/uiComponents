@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import CSSModules from 'react-css-modules';
 import styles from '../Cardlist/index.css';
+import renderIcons from '../utils/renderIcons';
 
 class CardlistItem extends React.Component {
     static propTypes = {
@@ -11,15 +12,21 @@ class CardlistItem extends React.Component {
         image: PropTypes.string.isRequired,
         isActive: PropTypes.bool.isRequired,
         handleSelect: PropTypes.func,
+        icons: PropTypes.array,
         children: PropTypes.node,
         styles: PropTypes.object
     };
     static defaultProps = {
-        href: '/assets/Cardlist/',
-        isActive: false
+        href: '/assets/',
+        isActive: false,
+        icons:[
+            {name: 'fave3', title: 'Favorite icon', desc: 'a favorite button', color: '#fff', size: 'sm'},
+            {name: 'share', title: 'Share icon', desc: 'a share button', color: '#fff', size: 'sm'},
+            {name: 'volumeMute', title: 'Mute icon', desc: 'a mute button', color: '#fff', size: 'sm'}
+        ]
     };
     render() {
-        const {children, title, subtitle, details, href, image, styles, isActive, handleSelect} = this.props;
+        const {title, subtitle, details, href, image, icons, styles, isActive, handleSelect} = this.props;
         const activeItem = isActive ? styles['itemActive'] : '';
         const activeDesc = isActive ? styles['descActive'] : '';
         const activeOptions = isActive ? styles['optionsActive'] : '';
@@ -29,7 +36,7 @@ class CardlistItem extends React.Component {
                     <a href="#" styleName="overlay"></a>
                     <img src={href + image} alt=""></img>
                     <div styleName="options" className={activeOptions}>
-                        {children}
+                        {renderIcons(icons)}
                     </div>
                 </div>
                 <div styleName="desc" className={activeDesc}>

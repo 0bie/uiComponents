@@ -99,14 +99,18 @@ render(
 );
 
 render(
-    <Container title="Card"
+    <Container title="Card" footer
         description={<ul>
             <li>A description of the card component.</li>
             <li>Its usage and supported props</li>
             <li>...</li>
             </ul>
         }>
-            <Card title="Card Title" footer>
+            <Card title="Card Title" footer icons={[
+                {name: 'twitter', color: '#fff', title: 'Twitter icon', desc: 'Share on Twitter'},
+                {name: 'facebook', color: '#fff', title: 'Facebook icon', desc: 'Share on Facebook'},
+                {name: 'instagram', color: '#fff', title: "Instagram icon", desc: 'Share on Instagram'}
+                ]}>
                 <CardItem/>
             </Card>
     </Container>, card_1
@@ -136,7 +140,12 @@ render(
             <li>...</li>
             </ul>
         }>
-            <Card title="Card Title" />
+            <Card title="Card Title" footer icons={[
+                {name: 'fave3', color: '#fff', title:'Favorite icon', desc: 'A favorite button'},
+                {name: 'share', color: '#fff', title: 'Share icon', desc: 'A share button'},
+                {name: 'ellipsis', color: '#fff', title: 'More options', desc:'Options button' }
+                ]}>
+            </Card>
     </Container>, card_3
 );
 
@@ -149,26 +158,10 @@ render(
             </ul>
         }>
             <Cardlist>
-                <CardlistItem title="Card Title" subtitle="Card Subtitle/Author" details="extra details..." image="black.jpg">
-                    <Icon name="fave3" title="favorite icon" desc="a favorite/save icon" size="sm" color="white"/>
-                    <Icon name="share" title="share icon" desc="a share icon" color="white" size="sm"/>
-                    <Icon name="ellipsis" title="ellipsis icon" desc="an ellipsis icon" color="white" size="sm" />
-                </CardlistItem>
-                <CardlistItem title="Card Title" subtitle="Card Subtitle/Author" details="extra details..." image="blue.jpg">
-                    <Icon name="fave3" title="favorite icon" desc="a favorite/save icon" color="white" size="sm"/>
-                    <Icon name="share" title="share icon" desc="a share icon" color="white" size="sm"/>
-                    <Icon name="ellipsis" title="ellipsis icon" desc="an ellipsis icon" color="white" size="sm" />
-                </CardlistItem>
-                <CardlistItem title="Card Title" subtitle="Card Subtitle/Author" details="extra details..." image="orange.jpg">
-                    <Icon name="fave3" title="favorite icon" desc="a favorite/save icon" color="white" size="sm" />
-                    <Icon name="share" title="share icon" desc="a share icon" color="white" size="sm" />
-                    <Icon name="ellipsis" title="ellipsis icon" desc="an ellipsis icon" color="white" size="sm" />
-                </CardlistItem>
-                <CardlistItem title="Card Title" subtitle="Card Subtitle/Author" details="extra details..." image="yellow.jpg">
-                    <Icon name="fave3" title="favorite icon" desc="a favorite/save icon" color="white" size="sm" />
-                    <Icon name="share" title="share icon" desc="a share icon" color="white" size="sm" />
-                    <Icon name="ellipsis" title="ellipsis icon" desc="an ellipsis icon" color="white" size="sm" />
-                </CardlistItem>
+                <CardlistItem title="Card Title" subtitle="Card Subtitle/Author" details="extra details..." image="black.jpg" />
+                <CardlistItem title="Card Title" subtitle="Card Subtitle/Author" details="extra details..." image="blue.jpg" />
+                <CardlistItem title="Card Title" subtitle="Card Subtitle/Author" details="extra details..." image="orange.jpg" />
+                <CardlistItem title="Card Title" subtitle="Card Subtitle/Author" details="extra details..." image="yellow.jpg" />
             </Cardlist>
     </Container>, cardlist
 );
@@ -229,12 +222,12 @@ render(
         </ul>
     }>
         <Playlist>
-            <PlaylistItem title="Song Title 1" artist="Artist 1" duration="3:50"/>
-            <PlaylistItem title="Song Title 2" artist="Artist 2" duration="5:00"/>
-            <PlaylistItem title="Song Title 3" artist="Artist 3" duration="2:55"/>
-            <PlaylistItem title="Song Title 4" artist="Artist 4" duration="7:50"/>
-            <PlaylistItem title="Song Title 5" artist="Artist 5" duration="4:50"/>
-            <PlaylistItem title="Song Title 6" artist="Artist 6" duration="3:50"/>
+            <PlaylistItem title="Song Title 1" artist="Artist 1" duration="3:50" />
+            <PlaylistItem title="Song Title 2" artist="Artist 2" duration="5:00" />
+            <PlaylistItem title="Song Title 3" artist="Artist 3" duration="2:55" />
+            <PlaylistItem title="Song Title 4" artist="Artist 4" duration="7:50" />
+            <PlaylistItem title="Song Title 5" artist="Artist 5" duration="4:50" />
+            <PlaylistItem title="Song Title 6" artist="Artist 6" duration="3:50" />
         </Playlist>
     </Container>, playlist
 );
@@ -333,7 +326,12 @@ render(
         <Image src="assets/yellow.jpg" size="xsm" alt="placeholder text"/>
         <Image src="assets/orange.jpg" size="sm" alt="placeholder text"/>
         <Image src="assets/blue.jpg" size="md" alt="placeholder text"/>
-        <Image src="assets/black.jpg" size="lg" alt="placeholder text"/>
-        <Image src="assets/yellow.jpg" size="xl" shape="circle" alt="placeholder text"/>
+        <Image src="assets/black.jpg" size="lg"  alt="placeholder text"/>
+        {/*<Image src="assets/yellow.jpg" size="xl" shape="circle" alt="placeholder text"/>*/}
+        <br/><br/>
+        <Image src="assets/blue.jpg" size="xsm" shape="circle" alt="placeholder text"/>
+        <Image src="assets/black.jpg" size="sm" shape="circle" alt="placeholder text"/>
+        <Image src="assets/orange.jpg" size="md" shape="circle" alt="placeholder text"/>
+        <Image src="assets/yellow.jpg" size="lg" shape="circle" alt="placeholder text"/>
     </Container>, image
 );

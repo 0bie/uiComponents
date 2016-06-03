@@ -1,18 +1,20 @@
 import React, { PropTypes } from 'react';
 import CSSModules from 'react-css-modules';
 import styles from './index.css';
-import Icon from '../Icon/index.js';
+import renderIcons from '../utils/renderIcons';
 
 class Card extends React.Component {
     static propTypes = {
         children: PropTypes.node,
-        title: PropTypes.string.isRequired
+        title: PropTypes.string.isRequired,
+        footer: PropTypes.bool,
+        icons: PropTypes.array
     };
     static defaultProps = {
         title: ''
     };
     render() {
-        const {title, children} = this.props;
+        const {title, footer, icons, children} = this.props;
         return (
             <div styleName="card">
                 <div styleName="item">
@@ -25,13 +27,14 @@ class Card extends React.Component {
                         <br/>-<a href="https://www.google.com/design/spec/components/cards.html#cards-usage">Google</a>
                     </div>
                 </div>
+            {/*{ renderFoot(['twitter', 'facebook']) }*/}
+            { footer ?
                 <div styleName="footer">
                     <div styleName="content">
-                        <Icon name="fave3" title="favorite icon" desc="a favorite/save icon" size="md" color="white"/>
-                        <Icon name="share" title="share icon" desc="a share icon" color="white" size="md"/>
-                        <Icon name="ellipsis" title="ellipsis icon" desc="an ellipsis icon" color="white" size="md" />
+                        {renderIcons(icons)}
                     </div>
                 </div>
+            : null}
             </div>
         );
     }
