@@ -4,8 +4,11 @@ import styles from './index.css';
 
 class Accordion extends React.Component {
     static propTypes = {
+        /** @type {string} Accordion title */
         title: PropTypes.node.isRequired,
+        /** @type {node} Sections within the accordion */
         children: PropTypes.node.isRequired,
+        /** @type {bool} If true, the AccordionSection will be in an open state */
         initialIsOpen: PropTypes.bool
     };
     static defaultProps = {
@@ -20,7 +23,6 @@ class Accordion extends React.Component {
         this.handleToggleOpen = this.handleToggleOpen.bind(this);
     }
     handleToggleOpen(isOpen) {
-        // const {children} = this.props;
         this.setState({ isOpen });
     }
     renderChildren() {
@@ -39,7 +41,7 @@ class Accordion extends React.Component {
 
     render() {
         return (
-            <div styleName="accordion">
+            <div styleName="root">
               {this.renderChildren()}
             </div>
         );
