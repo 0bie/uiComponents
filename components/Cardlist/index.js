@@ -5,6 +5,7 @@ import styles from './index.css';
 
 class Cardlist extends React.Component {
     static propTypes = {
+        /** @type {node} Contents of the Cardlist */
         children: PropTypes.node.isRequired
     };
     constructor(props) {
