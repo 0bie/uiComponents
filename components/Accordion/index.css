@@ -1,11 +1,11 @@
-.accordion {
-    padding: 1.875em 1.25em;
+:root {
+    /* stylelint-disable at-rule-empty-line-before */
+    @custom-media --bp (min-width: 50em);
+    /* stylelint-enable at-rule-empty-line-before */
 }
 
-.container {
-    max-width: 85%;
-    margin-left: auto;
-    margin-right: auto;
+.root {
+    padding: 1.875em 1.25em;
 }
 
 .title {
@@ -16,7 +16,7 @@
     border-bottom: 0.0625em solid #eee;
     cursor: pointer;
 
-    @media (min-width: 50em) {
+    @media (--bp) {
         font-size: 1.25rem;
     }
 }
@@ -33,7 +33,7 @@
     border-left: 12px solid currentColor;
     cursor: pointer;
 
-    @media (min-width: 50em) {
+    @media (--bp) {
         border-left-width: 16px;
     }
 }
@@ -42,7 +42,7 @@
     transform: rotate(0.15turn);
     right: 6px;
 
-    @media (min-width: 50em) {
+    @media (--bp) {
         right: 8px;
     }
 }
@@ -63,17 +63,6 @@
     max-height: 0vh;
     overflow: hidden;
     opacity: 0;
-}
-
-.content .o-Media__container {
-    width: 100%;
-    margin-bottom: 0;
-
-    @media(min-width: 43.75em) {
-        .content .o-Media__container {
-            max-width: none;
-        }
-    }
 }
 
 /* Interaction States */
