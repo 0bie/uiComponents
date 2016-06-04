@@ -5,20 +5,25 @@ import styles from '../Accordion/index.css';
 
 class AccordionSection extends React.Component {
     static propTypes = {
+        /** @type {function} Function triggered when the title is clicked */
         handleToggle: PropTypes.func,
+        /** @type {node} Contents of the accordion section */
         children: PropTypes.node,
+        /** @type {string} Title of the accordion section */
         title: PropTypes.string,
+        /** @type {string} If true, the accordion section will be in an open state */
         isOpen: PropTypes.bool,
+        /** @type {object} An object mapping class names from ../Accordion/index.css */
         styles: PropTypes.object
     };
 
     render() {
-        const { title, children, styles, handleToggle, isOpen } = this.props;
+        const { title, children, styles, handleToggle, isOpen, ...props } = this.props;
         const activeContent = isOpen ? styles['contentActive'] : '';
         const activeTitle = isOpen ? styles['titleActive'] : '';
 
         return (
-            <section styleName="section">
+            <section styleName="section" {...props}>
                 <h3 styleName="title" className={activeTitle} onClick={handleToggle}>
                     {title}
                 </h3>
