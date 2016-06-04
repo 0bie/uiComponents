@@ -76,6 +76,7 @@
         "property-no-vendor-prefix": true,
         "value-no-vendor-prefix": true,
         "no-duplicate-selectors": true,
+        "declaration-block-no-duplicate-properties": true,
         "string-no-newline": true,
         "string-quotes": double,
         "unit-no-unknown": true,
