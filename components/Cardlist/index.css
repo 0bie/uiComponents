@@ -1,15 +1,22 @@
-@media (min-width: 40em) {
-    .Cardlist {
-        display: flex;
-    }
+:root {
+    /* stylelint-disable at-rule-empty-line-before */
+    @custom-media --bp-sm-min (min-width: 40em);
+    @custom-media --bp-sm-max (max-width: 40em);
+    @custom-media --bp-md (min-width: 50em);
+    @custom-media --bp-lg (max-width: 56.25em);
+    /* stylelint-enable at-rule-empty-line-before */
 }
 
-.container {
+.root {
     max-width: 90%;
     margin-right: auto;
     margin-left: auto;
 
-    @media (max-width: 56.25em) {
+    @media (--bp-sm-min) {
+        display: flex;
+    }
+
+    @media (--bp-lg) {
         .container {
             padding-right: 2.5em;
             padding-left: 2.5em;
@@ -28,24 +35,24 @@
 }
 
 .item {
-    @media (max-width: 40em) {
+    @media (--bp-sm-max) {
         box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.2);
         margin-bottom: 0.9375em;
     }
 
-    @media (min-width: 40em) {
+    @media (--bp-sm-min) {
         position: relative;
         margin-left: -1.875em;
     }
 
-    @media (min-width: 50em) {
+    @media (--bp-md) {
         margin-left: -2.8125em;
     }
 }
 
 .content {
     /*
-     * Establish new stacking context to contain overlay (LN:25)
+     * Establish new stacking context to contain overlay
      * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
      */
     position: relative;
@@ -56,7 +63,7 @@
 
 .options {
     /*
-     * New block formatting context to avoid reflow when display property is changed  (LN:98)
+     * New block formatting context to avoid reflow when display property is changed
      * (https://www.w3.org/TR/css3-box/#block-level0)
      */
     position: absolute;
@@ -70,11 +77,9 @@
     padding: 0.2em 0.5em;
     background: rgba(76, 43, 43, 0.4);
 
-    @media (min-width: 40em) {
-        .options {
-            display: none;
-            justify-content: space-between;
-        }
+    @media (--bp-sm-min) {
+        display: none;
+        justify-content: space-between;
     }
 }
 
@@ -90,7 +95,7 @@
     padding: 0.5em;
     white-space: nowrap;
 
-    @media (min-width: 40em) {
+    @media (--bp-sm-min) {
         .desc {
             /*
              * New block formatting context to avoid reflow when display property is changed
@@ -106,6 +111,8 @@
         }
     }
 }
+
+/* Interaction states */
 
 .itemActive {
     position: relative;

@@ -34,7 +34,7 @@ class Cardlist extends React.Component {
     }
     render() {
         return (
-            <ul styleName="Cardlist" onMouseOut={this.handleClearItem}>
+            <ul styleName="root" onMouseOut={this.handleClearItem}>
                 {this.renderChildren()}
             </ul>
         );
