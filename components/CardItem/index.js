@@ -9,14 +9,14 @@ class CardItem extends React.Component {
         alt: PropTypes.string
     };
     static defaultProps = {
-        image: 'black.jpg',
-        href: '/assets/Card/',
+        image: 'black-rect.jpg',
+        href: '/assets/',
         alt: 'Alternate text'
     };
     render() {
         const {href, image} = this.props;
         return (
-            <div styleName="item">
+            <div>
                 <img src={href + image} alt=""></img>
             </div>
         );
