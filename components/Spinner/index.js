@@ -16,7 +16,7 @@ class Spinner extends Component {
             <div styleName={size} className={g.center}>
                 <div styleName="spinner" {...props}>
                     <svg styleName="circle" viewBox="25 25 50 50">
-                     <circle styleName="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+                     <circle styleName="path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"/>
                     </svg>
                 </div>
             </div>
