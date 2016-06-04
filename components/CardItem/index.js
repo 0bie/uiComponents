@@ -4,20 +4,14 @@ import styles from '../Card/index.css';
 
 class CardItem extends React.Component {
     static propTypes = {
-        href: PropTypes.string.isRequired,
-        image: PropTypes.string.isRequired,
-        alt: PropTypes.string
-    };
-    static defaultProps = {
-        image: 'black-rect.jpg',
-        href: '/assets/',
-        alt: 'Alternate text'
+        /** @type {node} Content(s) of the CardItem */
+        children: PropTypes.node
     };
     render() {
-        const {href, image} = this.props;
+        const { children, ...props } = this.props;
         return (
-            <div>
-                <img src={href + image} alt=""></img>
+            <div {...props}>
+                {children}
             </div>
         );
     }
