@@ -74,27 +74,27 @@ render(
             <Accordion>
                 <AccordionSection title="Accordion Title 1">
                     <Media>
-                        <Icon name="media1" title="media icon" desc="a media icon"/>
+                        <Icon name="media1" title="media icon" desc="a media icon" size="lg"/>
                     </Media>
                 </AccordionSection>
                 <AccordionSection title="Accordion Title 2">
                     <Media>
-                        <Icon name="media1" title="media icon" desc="a media icon"/>
+                        <Icon name="media1" title="media icon" desc="a media icon" size="lg"/>
                     </Media>
                 </AccordionSection>
                 <AccordionSection title="Accordion Title 3">
                     <Media>
-                        <Icon name="media1" title="media icon" desc="a media icon"/>
+                        <Icon name="media1" title="media icon" desc="a media icon" size="lg" />
                     </Media>
                 </AccordionSection>
                 <AccordionSection title="Accordion Title 4">
                     <Media>
-                        <Icon name="media1" title="media icon" desc="a media icon"/>
+                        <Icon name="media1" title="media icon" desc="a media icon" size="lg" />
                     </Media>
                 </AccordionSection>
                 <AccordionSection title="Accordion Title 5">
                     <Media>
-                        <Icon name="media1" title="media icon" desc="a media icon"/>
+                        <Icon name="media1" title="media icon" desc="a media icon" size="lg" />
                     </Media>
                 </AccordionSection>
             </Accordion>
@@ -102,14 +102,14 @@ render(
 );
 
 render(
-    <Container title="Card" footer
+    <Container title="Card"
         description={<ul>
             <li>A description of the card component.</li>
             <li>Its usage and supported props</li>
             <li>...</li>
             </ul>
         }>
-            <Card title="Card Title" footer icons={[
+            <Card title="Card Title" footer hover icons={[
                 {name: 'twitter', color: '#fff', title: 'Twitter icon', desc: 'Share on Twitter'},
                 {name: 'facebook', color: '#fff', title: 'Facebook icon', desc: 'Share on Facebook'},
                 {name: 'instagram', color: '#fff', title: "Instagram icon", desc: 'Share on Instagram'}
@@ -143,7 +143,7 @@ render(
             <li>...</li>
             </ul>
         }>
-            <Card title="Card Title" footer icons={[
+            <Card title="Card Title" footer hover icons={[
                 {name: 'fave3', color: '#fff', title:'Favorite icon', desc: 'A favorite button'},
                 {name: 'share', color: '#fff', title: 'Share icon', desc: 'A share button'},
                 {name: 'ellipsis', color: '#fff', title: 'More options', desc:'Options button' }
@@ -181,22 +181,22 @@ render(
             <Carousel>
                 <CarouselItem>
                     <Media>
-                    <Icon name="media1" title="media icon" desc="a media icon" color="teal" />
+                    <Icon name="media1" title="media icon" desc="a media icon" color="teal" size="lg" />
                     </Media>
                 </CarouselItem>
                 <CarouselItem>
                     <Media title="Media Title 2">
-                    <Icon name="media1" title="media icon" desc="a media icon" color="peach" />
+                    <Icon name="media1" title="media icon" desc="a media icon" color="peach" size="lg" />
                     </Media>
                 </CarouselItem>
                 <CarouselItem>
                     <Media title="Media Title 3">
-                    <Icon name="media1" title="media icon" desc="a media icon" color="olive" />
+                    <Icon name="media1" title="media icon" desc="a media icon" color="olive" size="lg" />
                     </Media>
                 </CarouselItem>
                 <CarouselItem>
                     <Media title="Media Title 4">
-                    <Icon name="media1" title="media icon" desc="a media icon" color="indianred" />
+                    <Icon name="media1" title="media icon" desc="a media icon" color="indianred" size="lg" />
                     </Media>
                 </CarouselItem>
             </Carousel>
@@ -243,7 +243,7 @@ render(
         <li>...</li>
         </ul>
     }>
-        <Spinner size="md" />
+        <Spinner size="lg" />
     </Container>, spinner
 );
 
