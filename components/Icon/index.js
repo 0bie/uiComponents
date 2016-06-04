@@ -15,7 +15,7 @@ class Icon extends React.Component {
         className: PropTypes.string
     };
     static defaultProps = {
-        href: '/assets/Sprite/Sprite.svg#',
+        href: '/assets/sprite.svg#',
         width: '40',
         height: '40'
     };
