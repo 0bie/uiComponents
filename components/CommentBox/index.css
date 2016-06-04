@@ -24,9 +24,8 @@
     font-size: 1rem;
     font-family: inherit;
     border: 0.0625em solid themeA;
-    background: themeA;
+    background-color: themeA;
     color: #fff;
-    cursor: pointer;
     float: right;
     margin-top: 1em;
     padding: 0.5em;
