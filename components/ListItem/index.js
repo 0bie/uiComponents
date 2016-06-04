@@ -8,10 +8,10 @@ const ListItem = ({ children, ...props }) => {
             {children}
         </li>
     );
-}
+};
 
 ListItem.propTypes = {
     children: PropTypes.node
-}
+};
 
 export default CSSModules(ListItem, styles);

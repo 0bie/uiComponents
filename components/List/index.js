@@ -2,17 +2,17 @@ import React, { PropTypes } from 'react';
 import CSSModules from 'react-css-modules';
 import styles from './index.css';
 
-const List = ({ hover, children, ...props }) => {
-    const listHover = hover ? styles['hover'] : '';
+const List = ({ children, ...props }) => {
     return (
-        <ul styleName="root" className={listHover} {...props}>
+        <ul styleName="root" {...props}>
             {children}
         </ul>
     );
-}
+};
 
 List.propTypes = {
+    children: PropTypes.node,
     hover: PropTypes.bool
-}
+};
 
 export default CSSModules(List, styles);
