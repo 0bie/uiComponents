@@ -11,6 +11,7 @@ const ListItem = ({ children, ...props }) => {
 };
 
 ListItem.propTypes = {
+    /** @type {node} Content with the list item */
     children: PropTypes.node
 };
 
