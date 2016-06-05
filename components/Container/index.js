@@ -18,8 +18,11 @@ const Container = ({ title, description, children, ...props }) => {
 };
 
 Container.propTypes = {
+    /** @type {string} The title of the content within the container */
     title: PropTypes.string,
+    /** @type {node} A description of the content within the container */
     description: PropTypes.node,
+    /** @type {node} Content(s) of the container */
     children: PropTypes.node
 };
 
