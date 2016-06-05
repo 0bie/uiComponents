@@ -286,8 +286,8 @@ input:focus:-ms-input-placeholder {
     SPACING UTILS
    #############*/
 
-.clearBottom{
-    margin-bottom: 3.75rem;
+.clearBottomSm{
+    margin-bottom: 1.875rem;
 }
 
 .clearBottomMd {
