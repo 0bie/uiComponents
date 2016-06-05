@@ -4,10 +4,15 @@ import styles from './index.css';
 
 class CommentBox extends Component {
     static propTypes = {
+        /** @type {string} The inital content of the comment box */
         initialText: PropTypes.string.isRequired,
+        /** @type {bool} If true, the `photoCount`will be subtracted from the word count */
         initialPhotoAdded: PropTypes.bool.isRequired,
+        /** @type {number} The maximum number of characters allowed in the comment box */
         wordCount: PropTypes.number.isRequired,
+        /** @type {number} The number of characters that a photo contains */
         photoCount: PropTypes.number.isRequired,
+        /** @type {object} An object mapping class names from ./index.css */
         styles: PropTypes.object
     };
     static defaultProps = {
@@ -26,8 +31,6 @@ class CommentBox extends Component {
         this.handleTogglePhoto = this.handleTogglePhoto.bind(this);
     }
     handleChange(e) {
-        // const text = this.state.text;
-        // console.log(this.state.text);
         this.setState({ text: e.target.value });
     }
     handleTogglePhoto() {
@@ -50,13 +53,12 @@ class CommentBox extends Component {
         const text = this.state.text;
         const photoAdded = this.state.photoAdded;
         const updateChars = this.updateCharacters();
-        const lowCount = text.length > wordCount ? styles['low-count'] : 'test';
+        const lowCount = text.length > wordCount ? styles['low-count'] : '';
 
         return (
-            <div>
+            <div styleName="root">
                 <textarea styleName="textarea" onChange={this.handleChange}></textarea>
-                <br/>
-                <span className={lowCount}>{ this.updateCharacters() }</span>
+                <div className={lowCount}>{ this.updateCharacters() }</div>
                 <button styleName="button" disabled={updateChars === wordCount || updateChars < 0}>Comment</button>
                 <button styleName="button" onClick={this.handleTogglePhoto}>
                     {photoAdded ? '✓ Photo Added' : 'Add Photo' }
