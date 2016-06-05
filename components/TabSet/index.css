@@ -37,6 +37,8 @@
     transition: opacity, 0.75s, ease-in-out;
 }
 
+/* Interaction states */
+
 .tabActive {
     background: themeA;
     color: #fff;

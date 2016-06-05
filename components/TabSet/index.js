@@ -5,6 +5,7 @@ import g from '../global.css';
 
 class TabSet extends Component {
     static propTypes = {
+        /** @type {node} Tab sections */
         children: PropTypes.node
     }
     constructor(props) {
@@ -28,7 +29,6 @@ class TabSet extends Component {
             });
         });
     }
-
     render() {
         return <section className={g.clearBottomLg}>
             <ul styleName="list">
