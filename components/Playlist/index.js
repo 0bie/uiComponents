@@ -5,17 +5,14 @@ import Icon from '../Icon/index.js';
 
 class Playlist extends Component {
     static propTypes = {
-        title: PropTypes.string.isRequired,
-        artist: PropTypes.string.isRequired,
-        duration: PropTypes.string.isRequired,
+        /** @type {bool} If true, the playlist item will have an active state */
         isActive: PropTypes.bool.isRequired,
+        /** @type {bool} If true, the playlist item will have a playing state */
         initialIsPlaying: PropTypes.bool,
+        /** @type {node} Playlist items */
         children: PropTypes.node
     };
     static defaultProps = {
-        title: '',
-        artist: '',
-        duration: '',
         isActive: false,
         initialIsPlaying: false
     };
