@@ -28,8 +28,10 @@ class MainNavForm extends Component {
                     <option value="#cardlist">&nbsp;&nbsp;&nbsp;&nbsp;Card List</option>
                     <option value="#carousel">&nbsp;&nbsp;&nbsp;&nbsp;Carousel</option>
                     <option value="#commentbox">&nbsp;&nbsp;&nbsp;&nbsp;Comment Box</option>
-                    <option value="#loader">&nbsp;&nbsp;&nbsp;&nbsp;Loader</option>
+                    <option value="#image">&nbsp;&nbsp;&nbsp;&nbsp;Image</option>
+                    <option value="#list">&nbsp;&nbsp;&nbsp;&nbsp;List</option>
                     <option value="#playlist">&nbsp;&nbsp;&nbsp;&nbsp;Playlist</option>
+                    <option value="#spinner">&nbsp;&nbsp;&nbsp;&nbsp;Spinner</option>
                     <option value="#Subscribe">&nbsp;&nbsp;&nbsp;&nbsp;Subscribe Form</option>
                     <option value="#tabset">&nbsp;&nbsp;&nbsp;&nbsp;Tab Set</option>
                 </select>
