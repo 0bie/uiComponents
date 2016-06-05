@@ -74,27 +74,27 @@ render(
             <Accordion>
                 <AccordionSection title="Accordion Title 1">
                     <Media>
-                        <Icon name="media1" title="media icon" desc="a media icon" size="lg"/>
+                        <Icon name="media1" title="media icon" desc="a media icon" width={150} height={150} />
                     </Media>
                 </AccordionSection>
                 <AccordionSection title="Accordion Title 2">
                     <Media>
-                        <Icon name="media1" title="media icon" desc="a media icon" size="lg"/>
+                        <Icon name="media1" title="media icon" desc="a media icon" width={150} height={150} />
                     </Media>
                 </AccordionSection>
                 <AccordionSection title="Accordion Title 3">
                     <Media>
-                        <Icon name="media1" title="media icon" desc="a media icon" size="lg" />
+                        <Icon name="media1" title="media icon" desc="a media icon" width={150} height={150} />
                     </Media>
                 </AccordionSection>
                 <AccordionSection title="Accordion Title 4">
                     <Media>
-                        <Icon name="media1" title="media icon" desc="a media icon" size="lg" />
+                        <Icon name="media1" title="media icon" desc="a media icon" width={150} height={150} />
                     </Media>
                 </AccordionSection>
                 <AccordionSection title="Accordion Title 5">
                     <Media>
-                        <Icon name="media1" title="media icon" desc="a media icon" size="lg" />
+                        <Icon name="media1" title="media icon" desc="a media icon" width={150} height={150} />
                     </Media>
                 </AccordionSection>
             </Accordion>
@@ -109,12 +109,14 @@ render(
             <li>...</li>
             </ul>
         }>
-            <Card title="Card Title" footer hover icons={[
+            <Card title="Card Title" hasFooter hasHover icons={[
                 {name: 'twitter', color: '#fff', title: 'Twitter icon', desc: 'Share on Twitter'},
                 {name: 'facebook', color: '#fff', title: 'Facebook icon', desc: 'Share on Facebook'},
                 {name: 'instagram', color: '#fff', title: "Instagram icon", desc: 'Share on Instagram'}
-                ]}>
-                <CardItem/>
+            ]}>
+                <CardItem>
+                    <Image src="assets/black-rect.jpg" alt="alternate text" />
+                </CardItem>
             </Card>
     </Container>, card_1
 );
@@ -129,7 +131,7 @@ render(
         }>
             <Card title="Card Title">
                 <Media title="Media Title">
-                    <Icon name="media1" title="media icon" desc="a media icon"/>
+                    <Icon name="media1" title="media icon" desc="a media icon" width={120} height={120} />
                 </Media>
             </Card>
     </Container>, card_2
@@ -143,12 +145,11 @@ render(
             <li>...</li>
             </ul>
         }>
-            <Card title="Card Title" footer hover icons={[
+            <Card title="Card Title" hasFooter hasHover icons={[
                 {name: 'fave3', color: '#fff', title:'Favorite icon', desc: 'A favorite button'},
                 {name: 'share', color: '#fff', title: 'Share icon', desc: 'A share button'},
                 {name: 'ellipsis', color: '#fff', title: 'More options', desc:'Options button' }
-                ]}>
-            </Card>
+            ]} />
     </Container>, card_3
 );
 
@@ -161,10 +162,18 @@ render(
             </ul>
         }>
             <Cardlist>
-                <CardlistItem title="Card Title" subtitle="Card Subtitle/Author" details="extra details..." image="black.jpg" />
-                <CardlistItem title="Card Title" subtitle="Card Subtitle/Author" details="extra details..." image="blue.jpg" />
-                <CardlistItem title="Card Title" subtitle="Card Subtitle/Author" details="extra details..." image="orange.jpg" />
-                <CardlistItem title="Card Title" subtitle="Card Subtitle/Author" details="extra details..." image="yellow.jpg" />
+                <CardlistItem title="Card Title" subtitle="Card Subtitle/Author" details="extra details..." >
+                    <Image src="assets/yellow.jpg" alt="alt text" />
+                </CardlistItem>
+                <CardlistItem title="Card Title" subtitle="Card Subtitle/Author" details="extra details...">
+                    <Image src="assets/blue.jpg" alt="alt text" />
+                </CardlistItem>
+                <CardlistItem title="Card Title" subtitle="Card Subtitle/Author" details="extra details...">
+                    <Image src="assets/orange.jpg" alt="alt text" />
+                </CardlistItem>
+                <CardlistItem title="Card Title" subtitle="Card Subtitle/Author" details="extra details...">
+                    <Image src="assets/black.jpg" alt="alt text" />
+                </CardlistItem>
             </Cardlist>
     </Container>, cardlist
 );
@@ -180,23 +189,23 @@ render(
         }>
             <Carousel>
                 <CarouselItem>
-                    <Media>
-                    <Icon name="media1" title="media icon" desc="a media icon" color="teal" size="lg" />
+                    <Media title="Media Title 1">
+                        <Icon name="media1" title="media icon" desc="a media icon" color="teal" width={120} height={120} />
                     </Media>
                 </CarouselItem>
                 <CarouselItem>
                     <Media title="Media Title 2">
-                    <Icon name="media1" title="media icon" desc="a media icon" color="peach" size="lg" />
+                        <Icon name="media1" title="media icon" desc="a media icon" color="wheat" width={120} height={120} />
                     </Media>
                 </CarouselItem>
                 <CarouselItem>
                     <Media title="Media Title 3">
-                    <Icon name="media1" title="media icon" desc="a media icon" color="olive" size="lg" />
+                        <Icon name="media1" title="media icon" desc="a media icon" color="olive" width={120} height={120} />
                     </Media>
                 </CarouselItem>
                 <CarouselItem>
                     <Media title="Media Title 4">
-                    <Icon name="media1" title="media icon" desc="a media icon" color="indianred" size="lg" />
+                        <Icon name="media1" title="media icon" desc="a media icon" color="indianred" width={120} height={120} />
                     </Media>
                 </CarouselItem>
             </Carousel>
@@ -212,7 +221,7 @@ render(
             <li>...</li>
             </ul>
         }>
-            <CommentBox/>
+            <CommentBox />
     </Container>, commentBox
 );
 
@@ -243,7 +252,7 @@ render(
         <li>...</li>
         </ul>
     }>
-        <Spinner size="lg" />
+        <Spinner />
     </Container>, spinner
 );
 
@@ -269,23 +278,23 @@ render(
     }>
         <TabSet>
             <TabSection title="a">
-                <Media title="Media Title 1">
-                    <Icon name="media1" title="media icon" desc="a media icon"/>
+                <Media title="Media Title A">
+                    <Icon name="media1" title="media icon" desc="a media icon" width={200} height={200} />
                 </Media>
             </TabSection>
             <TabSection title="b">
-                <Media title="Media Title 2">
-                    <Icon name="media1" title="media icon" desc="a media icon"/>
+                <Media title="Media Title B">
+                    <Icon name="media1" title="media icon" desc="a media icon" width={200} height={200} />
                 </Media>
             </TabSection>
             <TabSection title="c">
-                <Media title="Media Title 3">
-                    <Icon name="media1" title="media icon" desc="a media icon"/>
+                <Media title="Media Title C">
+                    <Icon name="media1" title="media icon" desc="a media icon" width={200} height={200} />
                 </Media>
             </TabSection>
             <TabSection title="d">
-                <Media title="Media Title 4">
-                    <Icon name="media1" title="media icon" desc="a media icon"/>
+                <Media title="Media Title D">
+                    <Icon name="media1" title="media icon" desc="a media icon" width={200} height={200} />
                 </Media>
             </TabSection>
         </TabSet>
@@ -313,7 +322,7 @@ render(
         </ul>
     }>
         <Media>
-            <Icon name="media1" title="media icon" desc="a media icon" size="md" />
+            <Icon name="media1" title="media icon" desc="a media icon" width={120} height={120} />
         </Media>
     </Container>, media
 );
@@ -347,7 +356,7 @@ render(
         <li>...</li>
         </ul>
     }>
-        <List>
+        <List hasHover>
             <ListItem>
                 <Media>
                     <Image size="xsm" shape="circle" src="assets/blue.jpg" />
