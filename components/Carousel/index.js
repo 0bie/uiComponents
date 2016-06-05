@@ -5,6 +5,7 @@ import Icon from '../Icon/index.js';
 
 class Carousel extends Component {
     static propTypes = {
+        /** @type {node} The Carousel items */
         children: PropTypes.node
     }
     constructor(props) {
