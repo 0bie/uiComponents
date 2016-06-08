@@ -4,7 +4,6 @@ import { expect } from 'chai';
 import { shallow } from 'enzyme';
 import AccordionSection from './index';
 
-
 describe('<AccordionSection />', () => {
 
     it('should render a section', () => {

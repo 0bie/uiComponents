@@ -5,8 +5,6 @@ import { shallow } from 'enzyme';
 import Accordion from './index';
 import AccordionSection from '../AccordionSection';
 
-
-
 describe('<Accordion />', () => {
 
     it('should render a section', () => {

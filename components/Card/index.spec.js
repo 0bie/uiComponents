@@ -5,7 +5,6 @@ import { shallow } from 'enzyme';
 import Card from './index';
 import CardItem from '../CardItem';
 
-
 describe('<Card />', () => {
 
     it('should render a div', () => {
