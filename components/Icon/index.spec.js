@@ -23,8 +23,7 @@ describe('<Icon />', () => {
     });
 
     it('should have default dimensions', () => {
-        const wrapper = shallow(<Icon width={40} height={40} />);
-        console.log(wrapper.debug());
+        const wrapper = shallow(<Icon />);
         expect(wrapper.prop('width')).to.equal(40)
         expect(wrapper.prop('height')).to.equal(40)
     });
