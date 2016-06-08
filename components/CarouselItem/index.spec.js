@@ -13,7 +13,6 @@ describe('<CarouselItem />', () => {
 
     it('should render children', () => {
         const wrapper = shallow(<CarouselItem><div /><div /></CarouselItem>);
-        console.log(wrapper.debug());
         expect(wrapper.find('div')).to.have.length(2)
     });
 });

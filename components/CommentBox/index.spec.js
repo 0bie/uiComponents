@@ -8,7 +8,6 @@ describe('<CommentBox />', () => {
 
     it('should render a div', () => {
         const wrapper = shallow(<CommentBox />);
-        console.log(wrapper.debug());
         expect(wrapper.is('div')).to.equal(true);
     });
 
