@@ -24,7 +24,7 @@ class Accordion extends React.Component {
         this.setState({ isOpen });
     }
     renderChildren() {
-        const { children} = this.props;
+        const { children } = this.props;
         const { isOpen } = this.state;
         const handleToggleOpen = this.handleToggleOpen;
         return React.Children.map(children, (child, i) => {

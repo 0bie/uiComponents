@@ -35,14 +35,14 @@ class Card extends React.Component {
                             <br/>-<a href="https://www.google.com/design/spec/components/cards.html#cards-usage">Google</a>
                         </div>
                     </div>
-                { hasFooter ?
-                    <div styleName="footer" className={activeFooter}>
-                        <div styleName="footer-content">
-                            {renderIcons(icons)}
+                    { hasFooter ?
+                        <div styleName="footer" className={activeFooter}>
+                            <div styleName="footer-content">
+                                {renderIcons(icons)}
+                            </div>
                         </div>
-                    </div>
-                : null}
-            </div>
+                    : null}
+                </div>
             </div>
         );
     }
