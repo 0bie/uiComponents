@@ -14,6 +14,6 @@ describe('<Accordion />', () => {
 
     it('should render an accordion section', () => {
         const wrapper = shallow(<Accordion><AccordionSection /></Accordion>);
-        expect(wrapper.find(AccordionSection)).to.have.length(1)
+        expect(wrapper.find(AccordionSection)).to.have.length(1);
     });
 });

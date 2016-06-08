@@ -18,13 +18,13 @@ describe('<Icon />', () => {
 
     it('should render an icon', () => {
         const wrapper = shallow(<Icon name="test-name" />);
-        expect(wrapper.find('use')).to.have.length(1)
+        expect(wrapper.find('use')).to.have.length(1);
         expect(wrapper.find('use').html()).to.equal('<use xlink:href="/assets/sprite.svg#test-name"></use>');
     });
 
     it('should have default dimensions', () => {
         const wrapper = shallow(<Icon />);
-        expect(wrapper.prop('width')).to.equal(40)
-        expect(wrapper.prop('height')).to.equal(40)
+        expect(wrapper.prop('width')).to.equal(40);
+        expect(wrapper.prop('height')).to.equal(40);
     });
 });

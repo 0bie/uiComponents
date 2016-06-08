@@ -13,7 +13,6 @@ describe('<CardItem />', () => {
 
     it('should render children', () => {
         const wrapper = shallow(<CardItem><img /></CardItem>);
-        console.log(wrapper.debug());
-        expect(wrapper.find('img')).to.have.length(1)
+        expect(wrapper.find('img')).to.have.length(1);
     });
 });

@@ -18,6 +18,6 @@ describe('<CommentBox />', () => {
 
     it('should have action buttons', () => {
         const wrapper = shallow(<CommentBox />);
-        expect(wrapper.find('button')).to.have.length(2)
+        expect(wrapper.find('button')).to.have.length(2);
     });
 });

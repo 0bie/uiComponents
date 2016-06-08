@@ -9,7 +9,6 @@ describe('<Cardlist />', () => {
 
     it('should render a list', () => {
         const wrapper = shallow(<Cardlist />);
-        console.log(wrapper.debug());
         expect(wrapper.is('ul')).to.equal(true);
     });
 

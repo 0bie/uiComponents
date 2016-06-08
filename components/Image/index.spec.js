@@ -9,7 +9,7 @@ describe('<Image />', () => {
     it('should render an image', () => {
         const wrapper = shallow(<Image />);
         expect(wrapper.is('figure')).to.equal(true);
-        expect(wrapper.find('img')).to.have.length(1)
+        expect(wrapper.find('img')).to.have.length(1);
     });
 
     it('should render a caption', () => {

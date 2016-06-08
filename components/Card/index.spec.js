@@ -14,7 +14,7 @@ describe('<Card />', () => {
 
     it('should render a CardItem', () => {
         const wrapper = shallow(<Card><CardItem /></Card>);
-        expect(wrapper.find(CardItem)).to.have.length(1)
+        expect(wrapper.find(CardItem)).to.have.length(1);
     });
 
     it('should have a title', () => {

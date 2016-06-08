@@ -18,6 +18,6 @@ describe('<Container />', () => {
 
     it('should render children', () => {
         const wrapper = shallow(<Container><div /></Container>);
-        expect(wrapper.find('div')).to.have.length(1)
+        expect(wrapper.find('div')).to.have.length(1);
     });
 });
