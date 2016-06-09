@@ -4,7 +4,7 @@
   "description": "A set of ui components built in React JS",
   "main": "index.html",
   "scripts": {
-    "test": "export NODE_ENV=testing || set NODE_ENV=testing && mocha --compilers js:babel-register --require test.setup.js components/**/*.spec.js", 
+    "test": "export NODE_ENV=testing || set NODE_ENV=testing && mocha -w --compilers js:babel-register --require test.setup.js components/**/*.spec.js", 
     "start": "webpack-dev-server --progress",
     "clean": "rm -rf ./build/*",
     "lint": "eslint components/**/*.js && stylelint components/**/*.css",
