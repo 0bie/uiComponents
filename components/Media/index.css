@@ -1,8 +1,4 @@
 .root {
-    /*
-     * Establish new stacking context to contain footer (LN:70)
-     * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
-     */
     position: relative;
     z-index: 20;
 
