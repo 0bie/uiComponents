@@ -27,8 +27,8 @@ Media.propTypes = {
 };
 
 Media.defaultProps = {
-    title: data.title,
-    description: data.description
+    title: data && data.title,
+    description: data && data.description
 };
 
 export default CSSModules(Media, styles);
