@@ -18,8 +18,7 @@ class MainNavForm extends Component {
     render() {
         return (
             <form styleName="form" action method="post">
-                <select name="nav_select" className="js-nav"
-                  onChange= {this.handleSelectNav} ref="select">
+                <select name="nav_select" onChange= {this.handleSelectNav} ref="select">
                     <option value>Jump to...</option>
                     <option value="#accordion">&nbsp;&nbsp;&nbsp;&nbsp;Accordion</option>
                     <option value="#card1">&nbsp;&nbsp;&nbsp;&nbsp;Card 1</option>
@@ -35,7 +34,6 @@ class MainNavForm extends Component {
                     <option value="#Subscribe">&nbsp;&nbsp;&nbsp;&nbsp;Subscribe Form</option>
                     <option value="#tabset">&nbsp;&nbsp;&nbsp;&nbsp;Tab Set</option>
                 </select>
-                <input type="submit" value="Go" className={g.isRemoved} />
             </form>
         );
     }
