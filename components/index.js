@@ -26,6 +26,7 @@ import MainNavForm from './MainNavForm';
 import Media from './Media';
 import Playlist from './Playlist';
 import PlaylistItem from './PlaylistItem';
+import Sidebar from './Sidebar';
 import SubscribeForm from './SubscribeForm';
 import Spinner from './Spinner';
 import TabSet from './TabSet';
@@ -44,6 +45,7 @@ const container = document.getElementById('container');
 const icon = document.getElementById('icon');
 const image = document.getElementById('image');
 const list = document.getElementById('list');
+const sidebar = document.getElementById('sidebar');
 const spinner = document.getElementById('spinner');
 const mainNav = document.getElementById('nav');
 const media = document.getElementById('media');
@@ -384,4 +386,22 @@ render(
             </ListItem>
         </List>
     </Container>, list
+);
+
+render(
+    <Container title="sidebar"
+    description={<ul>
+        <li>A description of the sidebar component.</li>
+        <li>Its usage and supported props</li>
+        <li>...</li>
+        </ul>
+    }>
+            <Sidebar position="left" items={[
+                {item: '', children: <Icon name="media1" size="md" />},
+                {item: '', children: <Icon name="mail8" size="md" />},,
+                {item: '', children: <Icon name="graph1" size="md" />},
+                {item: '', children: <Icon name="media4" size="md" />},
+                {item: '', children: <Icon name="panel2" size="md" />},
+            ]} />
+    </Container>, sidebar
 );

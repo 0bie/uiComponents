@@ -1,0 +1,45 @@
+/* Theme */
+@value themeA from "../theme.css";
+
+.root {
+    display: flex;
+    flex: 0 0 5em;
+    flex-direction: column;
+    max-width: 5em;
+    background-color: themeA;
+    padding: 0.625em;
+    border: 1px solid;
+
+    transition:transform 0.75s ease-in-out;
+    /*transform: translateX(-5em);*/
+
+    position:fixed;
+    z-index: 80;
+
+    height:100vh;
+    overflow:scroll;
+}
+
+.root a {
+    display: block;
+    cursor: pointer;
+}
+
+.root a:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    padding: 0.5em;
+}
+
+.left {
+    top:0;
+    left:0;
+}
+
+.left.is-active {
+    transform: translateX(0);
+}
