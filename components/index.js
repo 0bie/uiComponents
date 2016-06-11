@@ -9,6 +9,7 @@ import './global.css';
 // E.g `import ComponentName/ from './PATH/TO/Component.jsx';`
 import Accordion from './Accordion';
 import AccordionSection from './AccordionSection';
+import Button from './Button';
 import Card from './Card';
 import CardItem from './CardItem';
 import Cardlist from './Cardlist';
@@ -35,6 +36,7 @@ import TabSection from './TabSection';
 // Define constants for each Component
 // E.g `const variableName = document.getElementById('dom-node');`
 const accordion = document.getElementById('accordion');
+const button = document.getElementById('button');
 const card_1 = document.getElementById('card1');
 const card_2 = document.getElementById('card2');
 const card_3 = document.getElementById('card3');
@@ -404,4 +406,20 @@ render(
                 {item: '', children: <Icon name="panel2" size="md" />},
             ]} />
     </Container>, sidebar
+);
+
+render(
+    <Container title="button"
+    description={<ul>
+        <li>A description of the button component.</li>
+        <li>Its usage and supported props</li>
+        <li>...</li>
+        </ul>
+    }>
+            <Button size="sm">Button-sm</Button>
+            <Button size="md">Button-md</Button>
+            <Button size="lg">Button-lg</Button>
+            <Button loading size="lg">Button</Button><br/><br/>
+            <Button size="xl">Button-xl</Button>
+    </Container>, button
 );
