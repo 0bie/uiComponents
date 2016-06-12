@@ -5,9 +5,10 @@
     --radius-sm: 0.1875em;
     --radius-md: 0.5em;
     --radius-lg: 0.8125em;
+    --radius-xl: 100%;
 }
 
-.root {
+.button {
     composes: border from "../global.css";
     font: inherit;
     background: transparent;
@@ -16,9 +17,14 @@
     white-space: nowrap;
 }
 
-.root + .root {
+.button + .button {
     margin-left: 0.3125em;
 }
+
+.button svg {
+    vertical-align: middle;
+}
+
 /* Animation */
 
 @keyframes rotate {
@@ -30,24 +36,41 @@
 /* Sizes */
 
 .sm {
-    composes: root;
+    composes: button;
     padding: 0.25em 0.625em;
 }
 
 .md {
-    composes: root;
+    composes: button;
     padding: 0.5em 1em;
 }
 
 .lg {
-    composes: root;
+    composes: button;
     padding: 0.875em 1.25em;
 }
 
 .xl {
-    composes: root;
-    padding: 0.4375em 1em;
+    composes: md;
     width: 100%;
+}
+
+/* Shapes */
+
+.circle {
+    border-radius: var(--radius-xl);
+    width: 60px;
+    height: 60px;
+}
+
+/* Type */
+
+.raised {
+    composes: softShadow from "../global.css";
+}
+
+.link {
+    border: 0;
 }
 
 /* States */
@@ -73,4 +96,13 @@
     border-radius: 8px;
     border-right-color: transparent;
     border-top-color: transparent;
+}
+
+.button[disabled] {
+    cursor: not-allowed;
+    color: rgba(128, 128, 128, 0.6);
+}
+
+.button[disabled] svg {
+    fill: rgba(128, 128, 128, 0.6);
 }

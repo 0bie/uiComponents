@@ -399,11 +399,11 @@ render(
         </ul>
     }>
             <Sidebar position="left" items={[
-                {item: '', children: <Icon name="media1" size="md" />},
-                {item: '', children: <Icon name="mail8" size="md" />},,
-                {item: '', children: <Icon name="graph1" size="md" />},
-                {item: '', children: <Icon name="media4" size="md" />},
-                {item: '', children: <Icon name="panel2" size="md" />},
+                {item: '', children: <Icon name="media1" size="md" title="media1" />},
+                {item: '', children: <Icon name="mail8" size="md" title="mail8" />},,
+                {item: '', children: <Icon name="graph1" size="md" title="graph1" />},
+                {item: '', children: <Icon name="media4" size="md" title="media4" />},
+                {item: '', children: <Icon name="panel2" size="md" title="panel2" />},
             ]} />
     </Container>, sidebar
 );
@@ -417,9 +417,11 @@ render(
         </ul>
     }>
             <Button size="sm">Button-sm</Button>
-            <Button size="md">Button-md</Button>
+            <Button size="md" type="raised">Button-md</Button>
             <Button size="lg">Button-lg</Button>
-            <Button loading size="lg">Button</Button><br/><br/>
-            <Button size="xl">Button-xl</Button>
+            <Button isLoading size="lg" shape="circle">Button</Button>
+            <Button size="sm" icon="search11">Button-sm</Button>
+            <Button size="md" type="raised" icon="mail18" disabled>Button-md</Button><br/><br/>
+            <Button size="xl" disabled>Button-xl</Button>
     </Container>, button
 );
