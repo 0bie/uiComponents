@@ -9,7 +9,7 @@ describe('<TabSet />', () => {
 
     it('should render a tab set', () => {
         const wrapper = shallow(<TabSet />);
-        expect(wrapper.find('ul')).to.have.length(1)
+        expect(wrapper.find('ul')).to.have.length(1);
     });
 
     it('should render tab sections', () => {
