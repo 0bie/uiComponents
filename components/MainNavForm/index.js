@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import CSSModules from 'react-css-modules';
 import redirectToUrl from '../utils/redirect';
 import styles from '../MainNav/index.css';
-import g from '../global.css';
 
 class MainNavForm extends Component {
     constructor(props) {
