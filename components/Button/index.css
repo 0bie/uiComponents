@@ -9,7 +9,10 @@
 }
 
 .button {
+    /* stylelint-disable declaration-block-no-duplicate-properties */
     composes: border from "../global.css";
+    composes: clearLeftMd from "../global.css";
+    /* stylelint-enable declaration-block-no-duplicate-properties */
     font: inherit;
     background: transparent;
     vertical-align: middle;
@@ -17,16 +20,11 @@
     white-space: nowrap;
 }
 
-.button + .button {
-    margin-left: 0.3125em;
-}
-
 .button svg {
     vertical-align: middle;
 }
 
 /* Animation */
-
 @keyframes rotate {
     100% {
         transform: rotate(360deg);
@@ -34,7 +32,6 @@
 }
 
 /* Sizes */
-
 .sm {
     composes: button;
     padding: 0.25em 0.625em;
@@ -56,7 +53,6 @@
 }
 
 /* Shapes */
-
 .circle {
     border-radius: var(--radius-xl);
     width: 60px;
@@ -64,7 +60,6 @@
 }
 
 /* Type */
-
 .raised {
     composes: softShadow from "../global.css";
 }
@@ -74,7 +69,6 @@
 }
 
 /* States */
-
 .loading {
     position: relative;
     color: transparent;
@@ -105,4 +99,23 @@
 
 .button[disabled] svg {
     fill: rgba(128, 128, 128, 0.6);
+}
+
+/* Button Group */
+
+/* Display */
+.inline {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.block {
+    display: flex;
+}
+
+/* Spacing */
+.inline .button,
+.block .button {
+    flex: 1 0 auto;
+    margin: 0;
 }
