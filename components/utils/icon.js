@@ -1,7 +1,7 @@
 import React from 'react';
 import Icon from '../Icon';
 
-const renderIcons = (icons) => {
+export const renderIcons = (icons) => {
     if (icons && icons.length) {
         return icons.map((props, i) => {
             return <button key={i}>
@@ -10,4 +10,10 @@ const renderIcons = (icons) => {
         });
     }
 };
-export default renderIcons;
+
+export const renderIcon = (icon, size) => {
+    if (icon && icon.length) {
+        return <Icon name={icon} size={size} title={icon}/>;
+    }
+    return icon && <Icon {...icon} />;
+};
