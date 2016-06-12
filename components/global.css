@@ -286,6 +286,7 @@ input:focus:-ms-input-placeholder {
     SPACING UTILS
    #############*/
 
+/* Vertical */
 .clearBottomSm{
     margin-bottom: 1.875rem;
 }
@@ -298,15 +299,27 @@ input:focus:-ms-input-placeholder {
     margin-bottom: 25em;
 }
 
-/* ##############
-    MEDIA UTILS
-   #############*/
+/* Horizontal */
+.clearLeftSm + .clearLeftSm{
+    margin-left: 0.3125em;
+}
 
-/* Ensure that nested Media spans full width */
-[class*="Card"] [class*="Media__container"],
-[class*="Carousel"] [class*="Media__container"],
-[class*="Accordion"] [class*="Media__container"],
-[class*="Tab"] [class*="Media__container"] {
-    max-width: none;
-    min-width: 100%;
+.clearRightSm + .clearRightSm{
+    margin-right: 0.3125em;
+}
+
+.clearLeftMd + .clearLeftMd{
+    margin-left: 1.125em;
+}
+
+.clearRightMd + .clearRightMd{
+    margin-right: 1.125em;
+}
+
+.clearLeftLg + .clearLeftLg{
+    margin-left: 1.875em;
+}
+
+.clearRightLg + .clearRightLg{
+    margin-right: 1.875em;
 }
