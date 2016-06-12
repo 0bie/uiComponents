@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import CSSModules from 'react-css-modules';
 import styles from './index.css';
 import Icon from '../Icon';
-import {renderIcon} from '../utils/icon';
+import { renderIcon } from '../utils/icon';
 
 const Button = ({ children, size, shape, type, isLoading, icon, iconPos, ...props }) => {
     const btnType = type ? styles[type] : '';
