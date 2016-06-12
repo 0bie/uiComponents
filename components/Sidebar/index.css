@@ -10,14 +10,15 @@
     padding: 0.625em;
     border: 1px solid;
 
-    transition:transform 0.75s ease-in-out;
-    /*transform: translateX(-5em);*/
+    transition: transform 0.75s ease-in-out;
 
-    position:fixed;
+    /* transform: translateX(-5em); */
+
+    /* position:fixed;
     z-index: 80;
 
     height:100vh;
-    overflow:scroll;
+    overflow:scroll; */
 }
 
 .root a {
@@ -36,8 +37,8 @@
 }
 
 .left {
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
 }
 
 .left.is-active {
