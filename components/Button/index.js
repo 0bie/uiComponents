@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import CSSModules from 'react-css-modules';
 import styles from './index.css';
-import Icon from '../Icon';
 import { renderIcon } from '../utils/icon';
 
 const Button = ({ children, size, shape, type, isLoading, icon, iconPos, ...props }) => {
@@ -36,7 +35,7 @@ Button.propTypes = {
     /** @type {string} Button icon */
     icon: PropTypes.string,
     /** @type {array} Icon position */
-    iconPos: PropTypes.oneOf(['left', 'right']),
+    iconPos: PropTypes.oneOf(['left', 'right'])
 
 };
 
