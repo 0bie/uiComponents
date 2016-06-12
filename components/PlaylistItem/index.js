@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import CSSModules from 'react-css-modules';
 import styles from '../Playlist/index.css';
-import renderIcons from '../utils/renderIcons';
+import { renderIcons } from '../utils/icon';
 
 const PlaylistItem = ({ title, author, duration, icons, isActive, isPlay, styles, children, ...props }) => {
     const activeItem = isActive && isPlay ? styles['itemActive'] : '';

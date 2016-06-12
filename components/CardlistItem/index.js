@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import CSSModules from 'react-css-modules';
 import styles from '../Cardlist/index.css';
-import renderIcons from '../utils/renderIcons';
+import { renderIcons } from '../utils/icon';
 
 const CardlistItem = ({ title, subtitle, details, icons, styles, isActive, handleSelect, children, ...props }) => {
     const activeItem = isActive ? styles['itemActive'] : '';

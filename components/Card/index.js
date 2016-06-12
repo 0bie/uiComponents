@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import CSSModules from 'react-css-modules';
 import styles from './index.css';
-import renderIcons from '../utils/renderIcons';
+import { renderIcons } from '../utils/icon';
 
 const Card = ({ title, hasFooter, hasHover, icons, children }) => {
     const activeFooter = hasFooter && hasHover ? styles['flyOut'] : '';
