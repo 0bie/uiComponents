@@ -1,23 +1,13 @@
 import React, { PropTypes, Component } from 'react';
 import CSSModules from 'react-css-modules';
 import styles from './index.css';
-import Icon from '../Icon';
 
 class Sidebar extends Component {
     static propTypes = {
+        /** @type {array} Sidebar items */
         items: PropTypes.array,
-        initialIsActive: PropTypes.bool
-    }
-    static defaultProps = {
-        initialIsActive: false
-    }
-    constructor(props) {
-        super(props);
-        this.state = {isActive: props.initialIsActive};
-        this.handleToggle = this.handleToggle.bind(this);
-    }
-    handleToggle() {
-        this.setState({isActive: true});
+        /** @type {string} Sidebar position */
+        position: PropTypes.string
     }
     renderItems() {
         const { items } = this.props;
@@ -30,14 +20,14 @@ class Sidebar extends Component {
         }
     }
     render() {
-        const { position, SidebarPos, handleToggle, ...props } = this.props;
-        const sidebarPos = position ? styles[sidebarPos] : null;
+        const { position, ...props } = this.props;
+        const sidebarPos = position ? styles[position] : null;
         return (
             <div>
-            <ul styleName="root" className={sidebarPos}>
+            <ul styleName="root" className={sidebarPos} {...props}>
                 {this.renderItems()}
             </ul>
-            {/*<button onClick={this.handleToggle()}>Toggle Sidebar</button>*/}
+            <button onClick={this.handleToggle}>Toggle Sidebar</button>
             </div>
         );
     }
