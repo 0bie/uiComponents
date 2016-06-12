@@ -3,13 +3,14 @@ import React from 'react';
 import { render } from 'react-dom';
 
 // Import global css
-import './global.css';
+import g from './global.css';
 
 // Import individual Components
 // E.g `import ComponentName/ from './PATH/TO/Component.jsx';`
 import Accordion from './Accordion';
 import AccordionSection from './AccordionSection';
 import Button from './Button';
+import ButtonGroup from './ButtonGroup';
 import Card from './Card';
 import CardItem from './CardItem';
 import Cardlist from './Cardlist';
@@ -398,7 +399,7 @@ render(
         <li>...</li>
         </ul>
     }>
-            <Sidebar position="left" items={[
+            <Sidebar items={[
                 {item: '', children: <Icon name="media1" size="md" title="media1" />},
                 {item: '', children: <Icon name="mail8" size="md" title="mail8" />},,
                 {item: '', children: <Icon name="graph1" size="md" title="graph1" />},
@@ -422,6 +423,19 @@ render(
             <Button isLoading size="lg" shape="circle">Button</Button>
             <Button size="sm" icon="search11">Button-sm</Button>
             <Button size="md" type="raised" icon="mail18" disabled>Button-md</Button><br/><br/>
-            <Button size="xl" disabled>Button-xl</Button>
+            <Button size="xl" disabled>Button-xl</Button><br/><br/>
+                <header>
+                    <h1 className={g.alignCenter}>Button Group</h1>
+                </header>
+            <ButtonGroup display="inline">
+                <Button size="md">Inline</Button>
+                <Button size="md">Inline</Button>
+                <Button size="md">Inline</Button>
+            </ButtonGroup><br /><br />
+            <ButtonGroup display="block">
+                <Button size="md">Block</Button>
+                <Button size="md">Block</Button>
+                <Button size="md">Block</Button>
+            </ButtonGroup>
     </Container>, button
 );
