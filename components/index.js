@@ -21,6 +21,8 @@ import CommentBox from './CommentBox';
 import Container from './Container';
 import Icon from './Icon';
 import Image from './Image';
+import Input from './Input';
+import InputGroup from './InputGroup';
 import List from './List';
 import ListItem from './ListItem';
 import MainNav from './MainNav';
@@ -47,6 +49,7 @@ const commentBox = document.getElementById('commentbox');
 const container = document.getElementById('container');
 const icon = document.getElementById('icon');
 const image = document.getElementById('image');
+const input = document.getElementById('input');
 const list = document.getElementById('list');
 const sidebar = document.getElementById('sidebar');
 const spinner = document.getElementById('spinner');
@@ -438,4 +441,32 @@ render(
                 <Button size="md">Block</Button>
             </ButtonGroup>
     </Container>, button
+);
+
+render(
+    <Container title="input"
+    description={<ul>
+        <li>A description of the input component.</li>
+        <li>Its usage and supported props</li>
+        <li>...</li>
+        </ul>
+    }>
+            <Input size="sm" placeholder="Placeholder text" />
+            <Input size="md" placeholder="Placeholder text" />
+            <Input size="lg" placeholder="Placeholder text" />
+            <Input size="xl" placeholder="Placeholder text" /><br/><br/>
+            <header>
+                <h1 className={g.alignCenter}>Input Group</h1>
+            </header>
+            <InputGroup display="inline">
+                <Input size="md" placeholder="Placeholder text" />
+                <Input size="md" placeholder="Placeholder text" />
+                <Input size="md" placeholder="Placeholder text" />
+            </InputGroup><br/><br/>
+        <InputGroup display="block" disabled>
+                <Input size="md" placeholder="Placeholder text" disabled />
+                <Input size="md" placeholder="Placeholder text" disabled  />
+                <Input size="md" placeholder="Placeholder text" disabled  />
+            </InputGroup>
+    </Container>, input
 );
