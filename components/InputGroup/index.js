@@ -10,7 +10,9 @@ InputGroup.propTypes = {
     /** @type {string} InputGroup dislay */
     display: PropTypes.string,
     /** @type {bool} If true, the input will have  a disabled state */
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    /** @type {node} Input elements */
+    children: PropTypes.node
 };
 
 InputGroup.defaultProps = {
