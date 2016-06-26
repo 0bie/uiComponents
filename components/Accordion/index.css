@@ -57,10 +57,7 @@
 }
 
 .content {
-    /* stylelint-disable number-zero-length-no-unit */
-
-    /* Need for transition */
-    max-height: 0vh;
+    max-height: 0vh; /* stylelint-disable-line length-zero-no-unit */
     overflow: hidden;
     opacity: 0;
 }
