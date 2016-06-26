@@ -1,9 +1,21 @@
+:root {
+    /* stylelint-disable at-rule-empty-line-before */
+    @custom-media --bp-md (min-width: 40em);
+    /* stylelint-enable at-rule-empty-line-before */
+}
+
 .input {
     composes: border from "../global.css";
-    composes: clearLeftMd from "../global.css";
+    composes: clearBottomSm from "../global.css"; /* stylelint-disable-line declaration-block-no-duplicate-properties */
     font: inherit;
+    width: 100%;
     padding-left: 0.625em;
     padding-right: 0.625em;
+
+    @media(--bp-md) {
+        width: auto;
+        margin-right: 1.125em;
+    }
 }
 
 /* Sizes */
@@ -40,13 +52,13 @@
 
 .inline {
     composes: input-group;
-    composes: alignCenter from "../global.css";
+    composes: alignCenter from "../global.css"; /* stylelint-disable-line declaration-block-no-duplicate-properties */
     display: inline-flex;
 }
 
 .block {
     composes: input-group;
-    composes: alignCenter from "../global.css";
+    composes: alignCenter from "../global.css"; /* stylelint-disable-line declaration-block-no-duplicate-properties */
     display: flex;
 }
 
