@@ -457,7 +457,7 @@ render(
             <Input size="xl" placeholder="Placeholder text" /><br/><br/>
             <header>
                 <h1 className={g.alignCenter}>Input Group</h1>
-            </header>
+            </header><br/><br/>
             <InputGroup display="inline">
                 <Input size="md" placeholder="Placeholder text" />
                 <Input size="md" placeholder="Placeholder text" />
