@@ -7,7 +7,6 @@
     flex-direction: column;
     max-width: 5em;
     background-color: themeB;
-    /*padding: 0.625em;*/
     border: 1px solid;
     transition: transform 0.75s ease-in-out;
 
@@ -40,7 +39,7 @@
 }
 
 .item button:focus {
-    outline: 1px solid rgba(255, 255, 255, 0.10);
+    outline: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .top {

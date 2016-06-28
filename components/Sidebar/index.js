@@ -31,7 +31,7 @@ class Sidebar extends Component {
         const { items } = this.props;
         if (items && items.length) {
             return items.map((prop, i) => {
-                return <a src={`#`} key={i}>
+                return <a src="#" key={i}> // eslint-disable-line quotes 
                     <li styleName="item">{prop.item}{prop.children}</li>
                 </a>;
             });
