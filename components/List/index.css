@@ -2,7 +2,6 @@
     border: 1px solid #dbdbdb;
     position: relative;
     max-height: 115px;
-    overflow: hidden;
     transition: max-height 0.75s ease-in-out;
 }
 
@@ -12,9 +11,16 @@
 
 .root button {
     position: absolute;
-    top: 40px;
-    right: 40px;
+    top: -35px;
+    right: -1px;
+    border-bottom-width: 0;
     z-index: 60;
+
+    @media(min-width: 58.125em) {
+        top: 40px;
+        right: 40px;
+        border-bottom-width: 1px;
+    }
 }
 
 .item {
