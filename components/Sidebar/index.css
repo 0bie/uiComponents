@@ -1,24 +1,21 @@
 /* Theme */
-@value themeA from "../theme.css";
+@value themeB from "../theme.css";
 
 .root {
     display: flex;
     flex: 0 0 5em;
     flex-direction: column;
     max-width: 5em;
-    background-color: themeA;
-    padding: 0.625em;
+    background-color: themeB;
+    /*padding: 0.625em;*/
     border: 1px solid;
-
     transition: transform 0.75s ease-in-out;
 
-    /* transform: translateX(-5em); */
-
-    /* position:fixed;
+    /* Positioning styles */
+    position: fixed;
     z-index: 80;
-
-    height:100vh;
-    overflow:scroll; */
+    height: 100vh;
+    overflow: scroll;
 }
 
 .root a {
@@ -26,21 +23,62 @@
     cursor: pointer;
 }
 
-.root a:not(:last-child) {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-}
-
 .item {
     display: flex;
     justify-content: center;
-    padding: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    color: #fff;
+}
+
+.item button {
+    border: transparent;
+}
+
+.item svg {
+    fill: #fff;
+}
+
+.item button:focus {
+    outline: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.top {
+    left: 0;
+    right: 0;
+    top: 0;
+    max-width: none;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    transform: translateY(-6em);
+}
+
+.bottom {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: none;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    transform: translateY(6em);
 }
 
 .left {
     top: 0;
     left: 0;
+    padding: 0.5em;
+    transform: translateX(-5em);
 }
 
-.left.is-active {
+.right {
+    top: 0;
+    right: 0;
+    padding: 0.5em;
+    transform: translateX(5em);
+}
+
+.active {
     transform: translateX(0);
 }

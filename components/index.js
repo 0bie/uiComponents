@@ -402,12 +402,12 @@ render(
         <li>...</li>
         </ul>
     }>
-            <Sidebar items={[
-                {item: '', children: <Icon name="media1" size="md" title="media1" />},
-                {item: '', children: <Icon name="mail8" size="md" title="mail8" />},,
-                {item: '', children: <Icon name="graph1" size="md" title="graph1" />},
-                {item: '', children: <Icon name="media4" size="md" title="media4" />},
-                {item: '', children: <Icon name="panel2" size="md" title="panel2" />},
+            <Sidebar position="top" items={[
+                {item: '', children: <Button size="sm"><Icon name="avatar5" width={35} height={35} title="media1" /></Button>},
+                {item: '', children: <Button size="sm"><Icon name="mail8" width={35} height={35} title="mail8" /></Button>},,
+                {item: '', children:<Button size="sm"><Icon name="graph1" width={35} height={35} title="graph1" /></Button>},
+                {item: '', children: <Button size="sm"><Icon name="media4" width={35} height={35} title="media4" /></Button>},
+                {item: '', children: <Button size="sm"><Icon name="panel2" width={35} height={35} title="panel2" /></Button>},
             ]} />
     </Container>, sidebar
 );
