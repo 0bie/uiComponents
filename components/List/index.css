@@ -1,4 +1,5 @@
 .root {
+    composes: nbfc from "../global.css";
     border: 1px solid #dbdbdb;
     position: relative;
     max-height: 115px;
@@ -11,15 +12,15 @@
 
 .root button {
     position: absolute;
-    top: -35px;
+    top: 0;
     right: -1px;
-    border-bottom-width: 0;
+    border-top-width: 0;
     z-index: 60;
 
     @media(min-width: 58.125em) {
         top: 40px;
         right: 40px;
-        border-bottom-width: 1px;
+        border-top-width: 1px;
     }
 }
 
