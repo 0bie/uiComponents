@@ -9,7 +9,6 @@
     /* stylelint-enable declaration-block-no-duplicate-properties */
     max-width: 85%;
     padding: 1em;
-    overflow: hidden; /* Establish new block formatting context */
 }
 
 .title {
