@@ -15,15 +15,20 @@ module.exports = {
         loaders: [
             {
                 test: /\.json$/,
+                exclude: /node_modules/,
+                include: path.join(__dirname, 'components'),
                 loader: "json"
             },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
+                include: path.join(__dirname, 'components'),
                 loader: 'babel'
             },
             {
                 test: /\.css$/,
+                exclude: /node_modules/,
+                include: path.join(__dirname, 'components'),
                 loader: ExtractTextPlugin.extract('style', 'css?modules!postcss')
             }
         ]
