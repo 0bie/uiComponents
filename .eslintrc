@@ -1,0 +1,42 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "globals": {
+    "require": true
+  },
+  "plugins": ["babel", "react"],
+  "rules": {
+    "no-unused-vars": [2, { "vars": "local", "args": "after-used" }],
+    "indent": [2, 2],
+    "linebreak-style": 0,
+    "quotes": [2, "single"],
+    "jsx-quotes": [2, "prefer-double"],
+    "semi": [2, "always"],
+    "dot-notation": 2,
+    "babel/generator-star-spacing": 1,
+    "babel/object-shorthand": 1,
+    "babel/arrow-parens": 1,
+    "babel/no-await-in-loop": 1,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/react-in-jsx-scope": 2,
+    "react/self-closing-comp": ["error", {
+      "component": true,
+      "html": true
+    }]
+  }
+}

@@ -1,6 +1,6 @@
 {
     "rules": {
-        "indentation": 4,
+        "indentation": 2,
         "max-empty-lines": 2,
         "at-rule-empty-line-before": ["always", {
             "except": ["blockless-group","first-nested"],
