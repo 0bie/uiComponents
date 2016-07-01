@@ -2,11 +2,14 @@
     composes: nbfc from "../global.css";
     border: 1px solid #dbdbdb;
     position: relative;
-    max-height: 115px;
-    transition: max-height 0.75s ease-in-out;
 }
 
-.active {
+.expandable {
+  max-height: 115px;
+  transition: max-height 0.75s ease-in-out;
+}
+
+.expandable.active {
     max-height: 1000px;
 }
 
