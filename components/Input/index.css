@@ -1,81 +1,81 @@
 :root {
-    /* stylelint-disable at-rule-empty-line-before */
-    @custom-media --bp-md (min-width: 40em);
-    /* stylelint-enable at-rule-empty-line-before */
+  /* stylelint-disable at-rule-empty-line-before */
+  @custom-media --bp-md (min-width: 40em);
+  /* stylelint-enable at-rule-empty-line-before */
 }
 
 .input {
-    composes: border from "../global.css";
-    composes: clearBottomSm from "../global.css"; /* stylelint-disable-line declaration-block-no-duplicate-properties */
-    font: inherit;
-    width: 100%;
-    padding-left: 0.625em;
-    padding-right: 0.625em;
+  composes: border from "../global.css";
+  composes: clearBottomSm from "../global.css"; /* stylelint-disable-line declaration-block-no-duplicate-properties */
+  font: inherit;
+  width: 100%;
+  padding-left: 0.625em;
+  padding-right: 0.625em;
 
-    @media(--bp-md) {
-        width: auto;
-        margin-right: 1.125em;
-    }
+  @media(--bp-md) {
+    width: auto;
+    margin-right: 1.125em;
+  }
 }
 
 /* Sizes */
 
 .sm {
-    composes: input;
-    padding-top: 0.1875em;
-    padding-bottom: 0.1875em;
+  composes: input;
+  padding-top: 0.1875em;
+  padding-bottom: 0.1875em;
 }
 
 .md {
-    composes: input;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+  composes: input;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 .lg {
-    composes: input;
-    padding-top: 1em;
-    padding-bottom: 1em;
+  composes: input;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .xl {
-    composes: input;
-    padding-top: 1.4375em;
-    padding-bottom: 1.4375em;
+  composes: input;
+  padding-top: 1.4375em;
+  padding-bottom: 1.4375em;
 }
 
 .input-group .input {
-    margin: 0;
+  margin: 0;
 }
 
 /* Input Group Display */
 
 .inline {
-    composes: input-group;
-    composes: alignCenter from "../global.css"; /* stylelint-disable-line declaration-block-no-duplicate-properties */
-    display: inline-flex;
+  composes: input-group;
+  composes: alignCenter from "../global.css"; /* stylelint-disable-line declaration-block-no-duplicate-properties */
+  display: inline-flex;
 }
 
 .block {
-    composes: input-group;
-    composes: alignCenter from "../global.css"; /* stylelint-disable-line declaration-block-no-duplicate-properties */
-    display: flex;
+  composes: input-group;
+  composes: alignCenter from "../global.css"; /* stylelint-disable-line declaration-block-no-duplicate-properties */
+  display: flex;
 }
 
 .block .input,
 .inline input {
-    flex: 1;
-    text-align: inherit;
+  flex: 1;
+  text-align: inherit;
 }
 
 .block .input + .input,
 .inline input + .input {
-    border-left: 0;
+  border-left: 0;
 }
 
 /* States */
 
 .input:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
+  cursor: not-allowed;
+  opacity: 0.5;
 }

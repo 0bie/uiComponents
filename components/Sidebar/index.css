@@ -2,81 +2,81 @@
 @value themeB from "../theme.css";
 
 .root {
-    display: flex;
-    flex: 0 0 5em;
-    flex-direction: column;
-    max-width: 5em;
-    background-color: themeB;
-    transition: transform 0.75s ease-in-out;
+  display: flex;
+  flex: 0 0 5em;
+  flex-direction: column;
+  max-width: 5em;
+  background-color: themeB;
+  transition: transform 0.75s ease-in-out;
 
-    /* Positioning styles */
-    position: fixed;
-    z-index: 80;
-    height: 100vh;
-    overflow: scroll;
+  /* Positioning styles */
+  position: fixed;
+  z-index: 80;
+  height: 100vh;
+  overflow: scroll;
 }
 
 .root a {
-    display: block;
-    cursor: pointer;
+  display: block;
+  cursor: pointer;
 }
 
 .item {
-    display: flex;
-    justify-content: center;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    color: #fff;
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  color: #fff;
 }
 
 .item button {
-    border: transparent;
+  border: transparent;
 }
 
 .item svg {
-    fill: #fff;
+  fill: #fff;
 }
 
 .item button:focus {
-    outline: 1px solid rgba(255, 255, 255, 0.1);
+  outline: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .top {
-    left: 0;
-    right: 0;
-    top: 0;
-    max-width: none;
-    height: auto;
-    flex-direction: row;
-    justify-content: space-around;
-    transform: translateY(-6em);
+  left: 0;
+  right: 0;
+  top: 0;
+  max-width: none;
+  height: auto;
+  flex-direction: row;
+  justify-content: space-around;
+  transform: translateY(-6em);
 }
 
 .bottom {
-    left: 0;
-    right: 0;
-    bottom: 0;
-    max-width: none;
-    height: auto;
-    flex-direction: row;
-    justify-content: space-around;
-    transform: translateY(6em);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: none;
+  height: auto;
+  flex-direction: row;
+  justify-content: space-around;
+  transform: translateY(6em);
 }
 
 .left {
-    top: 0;
-    left: 0;
-    padding: 0.5em;
-    transform: translateX(-5em);
+  top: 0;
+  left: 0;
+  padding: 0.5em;
+  transform: translateX(-5em);
 }
 
 .right {
-    top: 0;
-    right: 0;
-    padding: 0.5em;
-    transform: translateX(5em);
+  top: 0;
+  right: 0;
+  padding: 0.5em;
+  transform: translateX(5em);
 }
 
 .active {
-    transform: translate(0);
+  transform: translate(0);
 }

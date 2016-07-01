@@ -1,68 +1,68 @@
 :root {
-    /* stylelint-disable at-rule-empty-line-before */
-    @custom-media --bp (min-width: 40em);
-    /* stylelint-enable at-rule-empty-line-before */
+  /* stylelint-disable at-rule-empty-line-before */
+  @custom-media --bp (min-width: 40em);
+  /* stylelint-enable at-rule-empty-line-before */
 }
 
 .root {
-    overflow: hidden;
-    padding: 1em;
-    text-align: center;
-    border-bottom: 0.0625em solid #d8d8d8;
+  overflow: hidden;
+  padding: 1em;
+  text-align: center;
+  border-bottom: 0.0625em solid #d8d8d8;
 
-    @media (--bp) {
-        position: fixed;
-        top: 0;
-        z-index: 50;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.95);
-    }
+  @media (--bp) {
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+  }
 }
 
 @media (--bp) {
-    .list {
-        float: left;
-    }
+  .list {
+    float: left;
+  }
 }
 
 .item {
-    display: inline;
+  display: inline;
 
-    @media (--bp) {
-        display: inline-block;
-    }
+  @media (--bp) {
+    display: inline-block;
+  }
 }
 
 .item a {
-    display: block;
-    font-size: 0.875rem;
-    font-weight: bold;
-    padding: 0.8571428571em;
-    color: inherit;
-    white-space: nowrap;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-bottom: 1px solid #eee;
+  display: block;
+  font-size: 0.875rem;
+  font-weight: bold;
+  padding: 0.8571428571em;
+  color: inherit;
+  white-space: nowrap;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
 
-    @media (--bp) {
-        display: inline;
-        border-bottom: 0;
-    }
+  @media (--bp) {
+    display: inline;
+    border-bottom: 0;
+  }
 }
 
 .item a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .form {
-    margin-top: 0.75em;
+  margin-top: 0.75em;
 
-    @media (--bp) {
-        float: right;
-        margin-top: 0;
-    }
+  @media (--bp) {
+    float: right;
+    margin-top: 0;
+  }
 }
 
 .form select {
-    font-size: 0.8125rem;
+  font-size: 0.8125rem;
 }

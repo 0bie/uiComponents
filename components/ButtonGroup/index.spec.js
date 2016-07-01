@@ -7,13 +7,13 @@ import ButtonGroup from './index';
 
 describe('<ButtonGroup />', () => {
 
-    it('should render a button group', () => {
-        const wrapper = shallow(<ButtonGroup />);
-        expect(wrapper.is('div')).to.equal(true);
-    });
+  it('should render a button group', () => {
+    const wrapper = shallow(<ButtonGroup />);
+    expect(wrapper.is('div')).to.equal(true);
+  });
 
-    it('should render buttons as children', () => {
-        const wrapper = shallow(<ButtonGroup><Button /><Button /></ButtonGroup>);
-        expect(wrapper.find(Button)).to.have.length(2);
-    });
+  it('should render buttons as children', () => {
+    const wrapper = shallow(<ButtonGroup><Button /><Button /></ButtonGroup>);
+    expect(wrapper.find(Button)).to.have.length(2);
+  });
 });

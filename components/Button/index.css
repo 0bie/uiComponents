@@ -2,120 +2,120 @@
 @value themeA from "../theme.css";
 
 :root {
-    --radius-sm: 0.1875em;
-    --radius-md: 0.5em;
-    --radius-lg: 0.8125em;
-    --radius-xl: 100%;
+  --radius-sm: 0.1875em;
+  --radius-md: 0.5em;
+  --radius-lg: 0.8125em;
+  --radius-xl: 100%;
 }
 
 .button {
-    /* stylelint-disable declaration-block-no-duplicate-properties */
-    composes: border from "../global.css";
-    composes: clearLeftMd from "../global.css";
-    /* stylelint-enable declaration-block-no-duplicate-properties */
-    font: inherit;
-    background: transparent;
-    vertical-align: middle;
-    cursor: pointer;
-    white-space: nowrap;
+  /* stylelint-disable declaration-block-no-duplicate-properties */
+  composes: border from "../global.css";
+  composes: clearLeftMd from "../global.css";
+  /* stylelint-enable declaration-block-no-duplicate-properties */
+  font: inherit;
+  background: transparent;
+  vertical-align: middle;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .button svg {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 /* Animation */
 @keyframes rotate {
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Sizes */
 .sm {
-    composes: button;
-    padding: 0.25em 0.625em;
+  composes: button;
+  padding: 0.25em 0.625em;
 }
 
 .md {
-    composes: button;
-    padding: 0.5em 1em;
+  composes: button;
+  padding: 0.5em 1em;
 }
 
 .lg {
-    composes: button;
-    padding: 0.875em 1.25em;
+  composes: button;
+  padding: 0.875em 1.25em;
 }
 
 .xl {
-    composes: md;
-    width: 100%;
+  composes: md;
+  width: 100%;
 }
 
 /* Shapes */
 .circle {
-    border-radius: var(--radius-xl);
-    width: 60px;
-    height: 60px;
+  border-radius: var(--radius-xl);
+  width: 60px;
+  height: 60px;
 }
 
 /* Type */
 .raised {
-    composes: softShadow from "../global.css";
+  composes: softShadow from "../global.css";
 }
 
 .link {
-    border: 0;
+  border: 0;
 }
 
 /* States */
 .loading {
-    position: relative;
-    color: transparent;
-    pointer-events: none;
+  position: relative;
+  color: transparent;
+  pointer-events: none;
 }
 
 .loading::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 
-    width: 16px;
-    height: 16px;
-    margin-left: -8px;
-    margin-top: -8px;
-    content: "";
-    animation: rotate 500ms linear infinite;
-    border: 2px solid themeA;
-    border-radius: 8px;
-    border-right-color: transparent;
-    border-top-color: transparent;
+  width: 16px;
+  height: 16px;
+  margin-left: -8px;
+  margin-top: -8px;
+  content: "";
+  animation: rotate 500ms linear infinite;
+  border: 2px solid themeA;
+  border-radius: 8px;
+  border-right-color: transparent;
+  border-top-color: transparent;
 }
 
 .button[disabled] {
-    cursor: not-allowed;
-    color: rgba(128, 128, 128, 0.6);
+  cursor: not-allowed;
+  color: rgba(128, 128, 128, 0.6);
 }
 
 .button[disabled] svg {
-    fill: rgba(128, 128, 128, 0.6);
+  fill: rgba(128, 128, 128, 0.6);
 }
 
 /* Button Group */
 
 /* Display */
 .inline {
-    display: inline-flex;
-    flex-wrap: wrap;
+  display: inline-flex;
+  flex-wrap: wrap;
 }
 
 .block {
-    display: flex;
+  display: flex;
 }
 
 /* Spacing */
 .inline .button,
 .block .button {
-    flex: 1 0 auto;
-    margin: 0;
+  flex: 1 0 auto;
+  margin: 0;
 }

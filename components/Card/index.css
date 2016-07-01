@@ -2,85 +2,85 @@
 @value themeA from "../theme.css";
 
 .root {
-    /*
-     * Establish new stacking context to contain `flyOut`
-     * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
-     */
-    position: relative;
-    z-index: 20;
+  /*
+   * Establish new stacking context to contain `flyOut`
+   * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
+   */
+  position: relative;
+  z-index: 20;
 
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 0.1875em;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.1875em;
 }
 
 .root::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 
-    display: block;
-    box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+  display: block;
+  box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
 }
 
 .container {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .title {
-    font-size: 1.25rem;
-    margin-bottom: 0.5em;
+  font-size: 1.25rem;
+  margin-bottom: 0.5em;
 }
 
 .item img {
-    display: block;
-    min-width: 100%;
+  display: block;
+  min-width: 100%;
 }
 
 .content {
-    padding: 1.25em;
+  padding: 1.25em;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-around;
-    background: themeA;
-    padding: 0.25em 0.75em;
+  display: flex;
+  justify-content: space-around;
+  background: themeA;
+  padding: 0.25em 0.75em;
 }
 
 .footer button {
-    font: inherit;
-    padding-left: 1em;
-    padding-right: 1em;
-    background: transparent;
-    border: 0;
-    cursor: pointer;
+  font: inherit;
+  padding-left: 1em;
+  padding-right: 1em;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
 }
 
 .desc {
-    overflow: visible;
+  overflow: visible;
 }
 
 /*
  * Interaction states for hidden footer-content
  */
 .flyOut {
-    transition: transform 0.5s ease-in-out;
-    transform: translateY(3.75em);
+  transition: transform 0.5s ease-in-out;
+  transform: translateY(3.75em);
 
-    /*
-     * Establish a higher stacking order to overlap adjacent elements
-     * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
-     */
-    position: relative;
-    bottom: 0;
-    z-index: 30;
+  /*
+   * Establish a higher stacking order to overlap adjacent elements
+   * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
+   */
+  position: relative;
+  bottom: 0;
+  z-index: 30;
 }
 
 .root:hover .flyOut {
-    transform: translateY(0);
+  transform: translateY(0);
 }

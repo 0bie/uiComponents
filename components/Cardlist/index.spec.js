@@ -7,13 +7,13 @@ import CardlistItem from '../CardlistItem';
 
 describe('<Cardlist />', () => {
 
-    it('should render a list', () => {
-        const wrapper = shallow(<Cardlist />);
-        expect(wrapper.is('ul')).to.equal(true);
-    });
+  it('should render a list', () => {
+    const wrapper = shallow(<Cardlist />);
+    expect(wrapper.is('ul')).to.equal(true);
+  });
 
-    it('should accept children', () => {
-        const wrapper = shallow(<Cardlist><CardlistItem /></Cardlist>);
-        expect(wrapper.find('ul').children()).to.have.length(1);
-    });
+  it('should accept children', () => {
+    const wrapper = shallow(<Cardlist><CardlistItem /></Cardlist>);
+    expect(wrapper.find('ul').children()).to.have.length(1);
+  });
 });

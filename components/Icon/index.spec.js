@@ -6,25 +6,25 @@ import Icon from './index';
 
 describe('<Icon />', () => {
 
-    it('should render an svg', () => {
-        const wrapper = shallow(<Icon />);
-        expect(wrapper.is('svg')).to.equal(true);
-    });
+  it('should render an svg', () => {
+    const wrapper = shallow(<Icon />);
+    expect(wrapper.is('svg')).to.equal(true);
+  });
 
-    it('should render a title', () => {
-        const wrapper = shallow(<Icon title="test-title" />);
-        expect(wrapper.find('title').text()).to.equal('test-title');
-    });
+  it('should render a title', () => {
+    const wrapper = shallow(<Icon title="test-title" />);
+    expect(wrapper.find('title').text()).to.equal('test-title');
+  });
 
-    it('should render an icon', () => {
-        const wrapper = shallow(<Icon name="test-name" />);
-        expect(wrapper.find('use')).to.have.length(1);
-        expect(wrapper.find('use').html()).to.equal('<use xlink:href="/assets/sprite.svg#test-name"></use>');
-    });
+  it('should render an icon', () => {
+    const wrapper = shallow(<Icon name="test-name" />);
+    expect(wrapper.find('use')).to.have.length(1);
+    expect(wrapper.find('use').html()).to.equal('<use xlink:href="/assets/sprite.svg#test-name"></use>');
+  });
 
-    it('should have default dimensions', () => {
-        const wrapper = shallow(<Icon />);
-        expect(wrapper.prop('width')).to.equal(40);
-        expect(wrapper.prop('height')).to.equal(40);
-    });
+  it('should have default dimensions', () => {
+    const wrapper = shallow(<Icon />);
+    expect(wrapper.prop('width')).to.equal(40);
+    expect(wrapper.prop('height')).to.equal(40);
+  });
 });

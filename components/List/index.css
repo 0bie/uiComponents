@@ -1,43 +1,43 @@
 .root {
-    composes: nbfc from "../global.css";
-    border: 1px solid #dbdbdb;
-    position: relative;
+  composes: nbfc from "../global.css";
+  border: 1px solid #dbdbdb;
+  position: relative;
 }
 
 .expandable {
   max-height: 115px;
-  transition: max-height 0.75s ease-in-out;
+  transition: max-height 0.75s ease;
 }
 
 .expandable.active {
-    max-height: 1000px;
+  max-height: 1000px;
 }
 
 .root button {
-    position: absolute;
-    top: 0;
-    right: -1px;
-    border-top-width: 0;
-    z-index: 60;
+  position: absolute;
+  top: 0;
+  right: -1px;
+  border-top-width: 0;
+  z-index: 60;
 
-    @media(min-width: 58.125em) {
-        top: 40px;
-        right: 40px;
-        border-top-width: 1px;
-    }
+  @media(min-width: 58.125em) {
+    top: 40px;
+    right: 40px;
+    border-top-width: 1px;
+  }
 }
 
 .item {
-    transition: background-color 0.3s ease-in-out;
-    padding: 0.5em;
+  transition: background-color 0.3s ease;
+  padding: 0.5em;
 }
 
 .hasHover .item:hover {
-    background-color: #f7f7f5;
-    cursor: pointer;
+  background-color: #f7f7f5;
+  cursor: pointer;
 }
 
 .item:not(:last-child) {
-    border: 0 solid #dbdbdb;
-    border-bottom-width: 1px;
+  border: 0 solid #dbdbdb;
+  border-bottom-width: 1px;
 }

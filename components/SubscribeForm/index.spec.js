@@ -6,8 +6,8 @@ import SubscribeForm from './index';
 
 describe('<SubscribeForm />', () => {
 
-    it('should render a form', () => {
-        const wrapper = shallow(<SubscribeForm />);
-        expect(wrapper.find('form')).to.have.length(1);
-    });
+  it('should render a form', () => {
+    const wrapper = shallow(<SubscribeForm />);
+    expect(wrapper.find('form')).to.have.length(1);
+  });
 });

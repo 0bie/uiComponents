@@ -4,38 +4,38 @@ import styles from './index.css';
 import g from '../global.css';
 
 const SubscribeForm = ({ placeholder, message, action }) => {
-    return (
-        <div styleName="root">
-            <form styleName="form">
-                <label styleName="label">
-                    <span className={g.a11yText}>{placeholder}</span>
-                    <input styleName="input-email" type="email" name="subscribe_email" placeholder={placeholder} required/>
-                </label>
-                <input styleName="button" type="submit" value={action}/>
-                <div styleName="message">
-                    <input styleName="checkbox" className={g.a11yText} type="checkbox" name="Subscribe_form" id="Subscribe_form" defaultChecked/>
-                    <label styleName="checkbox-label" htmlFor="Subscribe_form">
-                        {message}
-                    </label>
-                </div>
-            </form>
+  return (
+    <div styleName="root">
+      <form styleName="form">
+        <label styleName="label">
+          <span className={g.a11yText}>{placeholder}</span>
+          <input styleName="input-email" type="email" name="subscribe_email" placeholder={placeholder} required/>
+        </label>
+        <input styleName="button" type="submit" value={action}/>
+        <div styleName="message">
+          <input styleName="checkbox" className={g.a11yText} type="checkbox" name="Subscribe_form" id="Subscribe_form" defaultChecked/>
+          <label styleName="checkbox-label" htmlFor="Subscribe_form">
+            {message}
+          </label>
         </div>
-    );
+      </form>
+    </div>
+  );
 };
 
 SubscribeForm.propTypes = {
-    /** @type {string} Input placeholder */
-    placeholder: PropTypes.string.isRequired,
-    /** @type {string} Opt in or confirmation message */
-    message: PropTypes.string.isRequired,
-    /** @type {string} Call to action text */
-    action: PropTypes.string.isRequired
+  /** @type {string} Input placeholder */
+  placeholder: PropTypes.string.isRequired,
+  /** @type {string} Opt in or confirmation message */
+  message: PropTypes.string.isRequired,
+  /** @type {string} Call to action text */
+  action: PropTypes.string.isRequired
 };
 
 SubscribeForm.defaultProps = {
-    placeholder: 'Your Email Address',
-    message: 'An opt-in (confirmation) message',
-    action: 'Subscribe'
+  placeholder: 'Your Email Address',
+  message: 'An opt-in (confirmation) message',
+  action: 'Subscribe'
 };
 
 export default CSSModules(SubscribeForm, styles);

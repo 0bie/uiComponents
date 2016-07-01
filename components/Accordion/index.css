@@ -1,78 +1,78 @@
 :root {
-    /* stylelint-disable at-rule-empty-line-before */
-    @custom-media --bp (min-width: 50em);
-    /* stylelint-enable at-rule-empty-line-before */
+  /* stylelint-disable at-rule-empty-line-before */
+  @custom-media --bp (min-width: 50em);
+  /* stylelint-enable at-rule-empty-line-before */
 }
 
 .root {
-    padding: 1.875em 1.25em;
+  padding: 1.875em 1.25em;
 }
 
 .title {
-    position: relative;
-    display: block;
-    font-size: 1rem;
-    font-weight: normal;
-    border-bottom: 0.0625em solid #eee;
-    cursor: pointer;
+  position: relative;
+  display: block;
+  font-size: 1rem;
+  font-weight: normal;
+  border-bottom: 0.0625em solid #eee;
+  cursor: pointer;
 
-    @media (--bp) {
-        font-size: 1.25rem;
-    }
+  @media (--bp) {
+    font-size: 1.25rem;
+  }
 }
 
 .title::before,
 .title::after {
-    transition: transform 0s ease-in-out 0s;
-    position: absolute;
-    top: 5px;
-    content: "";
-    display: block;
-    height: 2px;
-    color: inherit;
-    border-left: 12px solid currentColor;
-    cursor: pointer;
+  transition: transform 0s ease-in-out 0s;
+  position: absolute;
+  top: 5px;
+  content: "";
+  display: block;
+  height: 2px;
+  color: inherit;
+  border-left: 12px solid currentColor;
+  cursor: pointer;
 
-    @media (--bp) {
-        border-left-width: 16px;
-    }
+  @media (--bp) {
+    border-left-width: 16px;
+  }
 }
 
 .title::before {
-    transform: rotate(0.15turn);
-    right: 6px;
+  transform: rotate(0.15turn);
+  right: 6px;
 
-    @media (--bp) {
-        right: 8px;
-    }
+  @media (--bp) {
+    right: 8px;
+  }
 }
 
 .title::after {
-    transform: rotate(0.85turn);
-    right: 0;
+  transform: rotate(0.85turn);
+  right: 0;
 }
 
 .section:not(:first-child) {
-    padding-top: 1.875em;
+  padding-top: 1.875em;
 }
 
 .content {
-    max-height: 0vh; /* stylelint-disable-line length-zero-no-unit */
-    overflow: hidden;
-    opacity: 0;
+  max-height: 0vh; /* stylelint-disable-line length-zero-no-unit */
+  overflow: hidden;
+  opacity: 0;
 }
 
 /* Interaction States */
 
 .contentActive {
-    max-height: none;
-    opacity: 1;
+  max-height: none;
+  opacity: 1;
 }
 
 .titleActive::before {
-    transform: rotate(1.35turn);
+  transform: rotate(1.35turn);
 }
 
 .titleActive::after {
-    transform: rotate(0.65turn);
+  transform: rotate(0.65turn);
 }

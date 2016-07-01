@@ -3,47 +3,47 @@
 @value themeB from "../theme.css";
 
 :root {
-    --xsm: 32px;
-    --sm: 64px;
-    --md: 128px;
-    --lg: 256px;
-    --xl: 612px;
+  --xsm: 32px;
+  --sm: 64px;
+  --md: 128px;
+  --lg: 256px;
+  --xl: 612px;
 }
 
 .root {
-    position: relative;
+  position: relative;
 }
 
 .foot {
-    composes: border from "../global.css";
-    padding: 0.875em;
-    text-align: center;
+  composes: border from "../global.css";
+  padding: 0.875em;
+  text-align: center;
 }
 
 /* Sizes */
 
 .xsm {
-    width: var(--xsm);
+  width: var(--xsm);
 }
 
 .sm {
-    width: var(--sm);
+  width: var(--sm);
 }
 
 .md {
-    width: var(--md);
+  width: var(--md);
 }
 
 .lg {
-    width: var(--lg);
+  width: var(--lg);
 }
 
 .xl {
-    width: var(--xl);
+  width: var(--xl);
 }
 
 /* Shape */
 
 .circle {
-    border-radius: 100%;
+  border-radius: 100%;
 }

@@ -1,21 +1,21 @@
 .container {
-    /* stylelint-disable declaration-block-no-duplicate-properties */
+  /* stylelint-disable declaration-block-no-duplicate-properties */
 
-    /* Need for css-modules */
-    composes: border from "../global.css";
-    composes: center from "../global.css";
-    composes: clearBottomMd from "../global.css";
-    composes: nbfc from "../global.css";
-    /* stylelint-enable declaration-block-no-duplicate-properties */
-    max-width: 85%;
-    padding: 1em;
+  /* Need for css-modules */
+  composes: border from "../global.css";
+  composes: center from "../global.css";
+  composes: clearBottomMd from "../global.css";
+  composes: nbfc from "../global.css";
+  /* stylelint-enable declaration-block-no-duplicate-properties */
+  max-width: 85%;
+  padding: 1em;
 }
 
 .title {
-    text-transform: capitalize;
-    text-align: center;
+  text-transform: capitalize;
+  text-align: center;
 }
 
 .description {
-    padding: 1em;
+  padding: 1em;
 }

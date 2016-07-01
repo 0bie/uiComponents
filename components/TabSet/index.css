@@ -3,64 +3,65 @@
 
 .list {
 
-    position: relative;
-    display: flex;
-    color: inherit;
+  position: relative;
+  display: flex;
+  color: inherit;
 }
 
 .item {
-    flex: 1;
-    border: 0.0625em solid;
-    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
-    text-transform: uppercase;
-    text-align: center;
-    cursor: pointer;
+  flex: 1;
+  border: 0.0625em solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
 }
 
 .item span {
-    position: relative;
-    display: block;
-    padding: 0.5em;
+  position: relative;
+  display: block;
+  padding: 0.5em;
 }
 
 .section {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
 
-    padding: 1em;
-    text-transform: none;
-    text-align: left;
-    cursor: initial;
-    opacity: 0;
-    transition: opacity, 0.75s, ease-in-out;
+  padding: 1em;
+  text-transform: none;
+  text-align: left;
+  cursor: initial;
+  opacity: 0;
+  transition: opacity, 0.75s, ease-in-out;
 }
 
 /* Interaction states */
 
 .tabActive {
-    background: themeA;
-    color: #fff;
-    border: 0;
+  background: themeA;
+  color: #fff;
+  border: 0;
 }
 
 .tabActive span::after {
-    position: absolute;
-    top: 100%;
-    left: 50%;
+  position: absolute;
+  top: 100%;
+  left: 50%;
 
-    content: "";
-    width: 0;
-    height: 0;
-    color: themeA;
-    border: solid transparent;
-    border-top-color: currentColor;
-    border-width: 0.75em;
-    margin-left: -0.75em;
+  content: "";
+  width: 0;
+  height: 0;
+  color: themeA;
+  border: solid transparent;
+  border-top-color: currentColor;
+  border-width: 0.75em;
+  margin-left: -0.75em;
 }
 
 .sectionActive {
-    opacity: 1;
-    color: themeA;
+  opacity: 1;
+  color: themeA;
+  z-index: 50;
 }

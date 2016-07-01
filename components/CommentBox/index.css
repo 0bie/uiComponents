@@ -2,43 +2,43 @@
 @value themeA from "../theme.css";
 
 .root {
-    padding: 1em;
+  padding: 1em;
 }
 
 .textarea {
-    width: 100%;
-    font-size: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    min-height: 120px;
-    padding: 1em;
+  width: 100%;
+  font-size: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  min-height: 120px;
+  padding: 1em;
 }
 
 .textarea:focus {
-    outline: 1px solid #26a3ff;
+  outline: 1px solid #26a3ff;
 }
 
 .button {
-    font-size: 1rem;
-    font-family: inherit;
-    border: 0.0625em solid themeA;
-    background-color: themeA;
-    color: #fff;
-    float: right;
-    margin-top: 1em;
-    padding: 0.5em;
-    text-transform: uppercase;
-    cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 0.0625em solid themeA;
+  background-color: themeA;
+  color: #fff;
+  float: right;
+  margin-top: 1em;
+  padding: 0.5em;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .button:last-of-type {
-    margin-right: 0.5em;
+  margin-right: 0.5em;
 }
 
 .button:disabled {
-    opacity: 0.65;
-    cursor: not-allowed;
+  opacity: 0.65;
+  cursor: not-allowed;
 }
 
 .low-count {
-    color: red;
+  color: red;
 }

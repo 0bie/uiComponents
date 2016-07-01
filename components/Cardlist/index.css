@@ -1,129 +1,129 @@
 :root {
-    /* stylelint-disable at-rule-empty-line-before */
-    @custom-media --bp-sm-min (min-width: 40em);
-    @custom-media --bp-sm-max (max-width: 40em);
-    @custom-media --bp-md (min-width: 50em);
-    @custom-media --bp-lg (max-width: 56.25em);
-    /* stylelint-enable at-rule-empty-line-before */
+  /* stylelint-disable at-rule-empty-line-before */
+  @custom-media --bp-sm-min (min-width: 40em);
+  @custom-media --bp-sm-max (max-width: 40em);
+  @custom-media --bp-md (min-width: 50em);
+  @custom-media --bp-lg (max-width: 56.25em);
+  /* stylelint-enable at-rule-empty-line-before */
 }
 
 .root {
-    max-width: 90%;
-    margin-right: auto;
-    margin-left: auto;
+  max-width: 90%;
+  margin-right: auto;
+  margin-left: auto;
 
-    @media (--bp-sm-min) {
-        display: flex;
-    }
+  @media (--bp-sm-min) {
+    display: flex;
+  }
 
-    @media (--bp-lg) {
-        .container {
-            padding-right: 2.5em;
-            padding-left: 2.5em;
-        }
+  @media (--bp-lg) {
+    .container {
+      padding-right: 2.5em;
+      padding-left: 2.5em;
     }
+  }
 }
 
 .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    background: rgba(255, 255, 255, 0.25);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .item {
-    @media (--bp-sm-max) {
-        box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.2);
-        margin-bottom: 0.9375em;
-    }
+  @media (--bp-sm-max) {
+    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.2);
+    margin-bottom: 0.9375em;
+  }
 
-    @media (--bp-sm-min) {
-        position: relative;
-        margin-left: -1.875em;
-    }
+  @media (--bp-sm-min) {
+    position: relative;
+    margin-left: -1.875em;
+  }
 
-    @media (--bp-md) {
-        margin-left: -2.8125em;
-    }
+  @media (--bp-md) {
+    margin-left: -2.8125em;
+  }
 }
 
 .content {
-    /*
-     * Establish new stacking context to contain overlay
-     * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
-     */
-    position: relative;
-    z-index: 20;
-    overflow: hidden;
-    box-shadow: 0 0 0.625em 0.25em rgba(0, 0, 0, 0.1);
+  /*
+   * Establish new stacking context to contain overlay
+   * https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
+   */
+  position: relative;
+  z-index: 20;
+  overflow: hidden;
+  box-shadow: 0 0 0.625em 0.25em rgba(0, 0, 0, 0.1);
 }
 
 .options {
-    /*
-     * New block formatting context to avoid reflow when display property is changed
-     * (https://www.w3.org/TR/css3-box/#block-level0)
-     */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 20;
+  /*
+   * New block formatting context to avoid reflow when display property is changed
+   * (https://www.w3.org/TR/css3-box/#block-level0)
+   */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
 
-    display: flex;
-    justify-content: space-around;
-    padding: 0.2em 0.5em;
-    background: rgba(76, 43, 43, 0.4);
+  display: flex;
+  justify-content: space-around;
+  padding: 0.2em 0.5em;
+  background: rgba(76, 43, 43, 0.4);
 
-    @media (--bp-sm-min) {
-        display: none;
-        justify-content: space-between;
-    }
+  @media (--bp-sm-min) {
+    display: none;
+    justify-content: space-between;
+  }
 }
 
 .options button {
-    font: inherit;
-    background: transparent;
-    border: 0;
-    padding-left: 1em;
-    padding-right: 1em;
-    cursor: pointer;
+  font: inherit;
+  background: transparent;
+  border: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  cursor: pointer;
 }
 
 .desc {
-    padding: 0.5em;
-    white-space: nowrap;
+  padding: 0.5em;
+  white-space: nowrap;
 
-    @media (--bp-sm-min) {
-        .desc {
-            /*
-             * New block formatting context to avoid reflow when display property is changed
-             * (https://www.w3.org/TR/css3-box/#block-level0)
-             **/
-            position: absolute;
-            left: 0;
-            right: 0;
-            z-index: 5;
+  @media (--bp-sm-min) {
+    .desc {
+      /*
+       * New block formatting context to avoid reflow when display property is changed
+       * (https://www.w3.org/TR/css3-box/#block-level0)
+       **/
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 5;
 
-            display: none;
-            padding-left: 0;
-        }
+      display: none;
+      padding-left: 0;
     }
+  }
 }
 
 /* Interaction states */
 
 .itemActive {
-    position: relative;
-    z-index: 30;
+  position: relative;
+  z-index: 30;
 }
 
 .descActive {
-    display: block;
+  display: block;
 }
 
 .optionsActive {
-    display: flex;
+  display: flex;
 }
