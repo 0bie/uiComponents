@@ -47,7 +47,16 @@ module.exports = {
             template: __dirname + "/components/index.tmpl.html"
         }),
         new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.optimize.UglifyJsPlugin(),
+        new webpack.optimize.UglifyJsPlugin({
+            comporessor: {
+              warnings: false
+            }
+        }),
+        new webpack.DefinePlugin({
+            'process.env': {
+              'NODE_ENV': "'production'"
+            }
+        }),
         new ExtractTextPlugin("[name]-[hash].css")
     ]
 }
