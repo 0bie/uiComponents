@@ -364,7 +364,16 @@ render(
         <li>...</li>
         </ul>
     }>
-        <List hasHover>
+      <List items={[
+          {title: "Item 1", children: null },
+          {title: "Item 2", children: null },
+          {title: "Item 3", children: null },
+          {title: "Item 4", children: null },
+          {title: "Item 5", children: null }
+      ]}/>
+      <br />
+      <br />
+      <List hasHover isExpandable>
             <ListItem>
                 <Media>
                     <Image size="xsm" shape="circle" src="assets/blue.jpg" />
