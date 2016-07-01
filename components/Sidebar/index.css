@@ -7,7 +7,6 @@
     flex-direction: column;
     max-width: 5em;
     background-color: themeB;
-    border: 1px solid;
     transition: transform 0.75s ease-in-out;
 
     /* Positioning styles */
@@ -79,5 +78,5 @@
 }
 
 .active {
-    transform: translateX(0);
+    transform: translate(0);
 }
