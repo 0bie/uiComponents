@@ -6,13 +6,16 @@
   --radius-md: 0.5em;
   --radius-lg: 0.8125em;
   --radius-xl: 100%;
+
+  --size-sm: 0.25em 0.625em;
+  --size-md: 0.5em 1em;
+  --size-lg: 0.875em 1.25em;
+  --size-circle: 60px;
 }
 
 .button {
-  /* stylelint-disable declaration-block-no-duplicate-properties */
   composes: border from "../global.css";
-  composes: clearLeftMd from "../global.css";
-  /* stylelint-enable declaration-block-no-duplicate-properties */
+  composes: clearLeftMd from "../global.css"; /* stylelint-disable-line declaration-block-no-duplicate-properties */
   font: inherit;
   background: transparent;
   vertical-align: middle;
@@ -34,17 +37,17 @@
 /* Sizes */
 .sm {
   composes: button;
-  padding: 0.25em 0.625em;
+  padding: var(--size-sm);
 }
 
 .md {
   composes: button;
-  padding: 0.5em 1em;
+  padding: var(--size-md);
 }
 
 .lg {
   composes: button;
-  padding: 0.875em 1.25em;
+  padding: var(--size-lg);
 }
 
 .xl {
@@ -55,8 +58,9 @@
 /* Shapes */
 .circle {
   border-radius: var(--radius-xl);
-  width: 60px;
-  height: 60px;
+  width: var(--size-circle);
+  height: var(--size-circle);
+  padding: 0;
 }
 
 /* Type */
@@ -66,6 +70,10 @@
 
 .link {
   border: 0;
+}
+
+.link:hover {
+  text-decoration: underline;
 }
 
 /* States */

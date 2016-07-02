@@ -20,7 +20,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 0.75s ease 0s;
+  transition: opacity 0.3s;
   border-top-width: 0;
 }
 

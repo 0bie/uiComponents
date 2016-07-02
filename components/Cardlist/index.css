@@ -1,10 +1,8 @@
 :root {
-  /* stylelint-disable at-rule-empty-line-before */
-  @custom-media --bp-sm-min (min-width: 40em);
+  @custom-media --bp-sm-min (min-width: 40em); /* stylelint-disable-line at-rule-empty-line-before */
   @custom-media --bp-sm-max (max-width: 40em);
   @custom-media --bp-md (min-width: 50em);
   @custom-media --bp-lg (max-width: 56.25em);
-  /* stylelint-enable at-rule-empty-line-before */
 }
 
 .root {

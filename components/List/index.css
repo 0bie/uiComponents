@@ -4,15 +4,6 @@
   position: relative;
 }
 
-.expandable {
-  max-height: 115px;
-  transition: max-height 0.75s ease;
-}
-
-.expandable.active {
-  max-height: 1000px;
-}
-
 .root button {
   position: absolute;
   top: 0;
@@ -28,8 +19,17 @@
 }
 
 .item {
-  transition: background-color 0.3s ease;
   padding: 0.5em;
+}
+
+.item:not(:last-child) {
+  border: 0 solid #dbdbdb;
+  border-bottom-width: 1px;
+}
+
+/* States */
+.hasHover .item {
+  transition: background-color 0.3s;
 }
 
 .hasHover .item:hover {
@@ -37,7 +37,19 @@
   cursor: pointer;
 }
 
-.item:not(:last-child) {
-  border: 0 solid #dbdbdb;
-  border-bottom-width: 1px;
+.expandable {
+  max-height: 210px;
+  transition: max-height 0.3s;
+
+  @media(min-width: 31.25em) {
+    max-height: 138px;
+  }
+
+  @media(min-width: 40.9375em) {
+    max-height: 114px;
+  }
+}
+
+.expandable.active {
+  max-height: 10000px;
 }

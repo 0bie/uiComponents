@@ -2,7 +2,6 @@
 @value themeA from "../theme.css";
 
 .list {
-
   position: relative;
   display: flex;
   color: inherit;
@@ -34,7 +33,7 @@
   text-align: left;
   cursor: initial;
   opacity: 0;
-  transition: opacity, 0.75s, ease;
+  transition: opacity 0.3s;
 }
 
 /* Interaction states */

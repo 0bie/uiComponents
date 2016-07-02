@@ -1,7 +1,5 @@
 .container {
   /* stylelint-disable declaration-block-no-duplicate-properties */
-
-  /* Need for css-modules */
   composes: border from "../global.css";
   composes: center from "../global.css";
   composes: clearBottomMd from "../global.css";

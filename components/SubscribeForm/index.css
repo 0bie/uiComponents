@@ -1,7 +1,5 @@
 :root {
-  /* stylelint-disable at-rule-empty-line-before */
-  @custom-media --bp (min-width: 50em);
-  /* stylelint-enable at-rule-empty-line-before */
+  @custom-media --bp (min-width: 50em); /* stylelint-disable at-rule-empty-line-before */
 }
 
 /* Theme */

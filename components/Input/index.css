@@ -1,7 +1,5 @@
 :root {
-  /* stylelint-disable at-rule-empty-line-before */
-  @custom-media --bp-md (min-width: 40em);
-  /* stylelint-enable at-rule-empty-line-before */
+  @custom-media --bp-md (min-width: 40em); /* stylelint-disable-line at-rule-empty-line-before */
 }
 
 .input {
