@@ -40,4 +40,4 @@ Button.defaultProps = {
   iconPos: 'left'
 };
 
-export default CSSModules(Button, styles, {allowMultiple: true});
+export default CSSModules(Button, styles);
