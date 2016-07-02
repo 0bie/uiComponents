@@ -10,7 +10,7 @@ class List extends Component {
     children: PropTypes.node,
     /** @type {bool} If true, the list item will have hover state */
     hasHover: PropTypes.bool,
-    /** @type {bool} If true, the list will have an active state */
+    /** @type {bool} If true, the list will have an expandable state */
     isExpandable: PropTypes.bool,
     /** @type {bool} If true, the list will have expandable properties */
     initialIsActive: PropTypes.bool,
