@@ -33,7 +33,7 @@ class Sidebar extends Component {
   render() {
     const { position, items, children, ...props } = this.props;
     const isActive = this.state.isActive;
-    const sidebarPos = position ? styles.position : null;
+    const sidebarPos = position ? styles[position] : null;
     const active = isActive ? styles.active : '';
     return (
       <div>
