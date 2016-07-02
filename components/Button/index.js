@@ -7,11 +7,8 @@ const Button = ({ children, size, shape, type, isLoading, icon, iconPos, ...prop
   const btnType = type ? styles[type] : '';
   const btnShape = shape ? styles[shape] : '';
   const loading = isLoading ? styles.loading : '';
-  let btnClasses = btnType;
-  if (btnShape) btnClasses += ' ' + btnShape;
-  if (loading) btnClasses += ' ' + loading;
   return (
-    <button styleName={size} className={btnClasses} {...props}>
+    <button styleName={size} className={`${btnType} ${btnShape} ${loading}`} {...props}>
       {iconPos === 'left' ? renderIcon(icon, size) : null}
       {children}
       {iconPos === 'right' ? renderIcon(icon, size) : null}
