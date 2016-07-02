@@ -7,8 +7,8 @@
     "test": "export NODE_ENV=testing || set NODE_ENV=testing && mocha -w --compilers js:babel-register --require test.setup.js components/**/*.spec.js",
     "start": "webpack-dev-server --progress",
     "clean": "rm -rf ./build/*",
-    "lint": "eslint components/**/*.js && stylelint components/**/*.css",
-    "lint:css": "stylelint components/**/*.css",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:css": "stylelint components/**/*.css components/global.css",
     "lint:js": "eslint components/**/*.js",
     "build": "NODE_ENV=production npm run clean && npm run lint && webpack --config ./webpack.production.config.js --progress",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
