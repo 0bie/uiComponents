@@ -1,254 +1,257 @@
 @charset "UTF-8";
+
 /*  #######
     globals
-    #######*/
+    ####### */
 
 html {
-    font: normal 100%/1.5 "Lato", sans-serif;
-    box-sizing: border-box;
+  font: normal 100%/1.5 "Lato", sans-serif;
+  box-sizing: border-box;
 }
 
 *,
-*:before,
-*:after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 body {
-    background: #fff;
-    color: #222;
+  background: #fff;
+  color: #222;
 }
 
-ol, ul {
-    list-style: none;
+ol,
+ul {
+  list-style: none;
 }
 
 table {
-    border-spacing: 0;
-    border-collapse: collapse;
+  border-spacing: 0;
+  border-collapse: collapse;
 }
 
 img,
 embed,
 object,
 video {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 img {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 main {
-    margin-top: 5em;
+  margin-top: 5em;
 }
 
 .input {
-    font-size: 1rem;
-    font-family: inherit;
-    background: #fff;
-    border: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fff;
+  border: 0;
+  appearance: none;
 }
 
+/* stylelint-disable selector-no-vendor-prefix */
 input::-webkit-input-placeholder {
-    opacity: 1;
-    font-size: 1rem;
-    text-overflow: ellipsis;
-    -webkit-transition: opacity 0.3s ease-in-out 0s;
-    transition: opacity 0.3s ease-in-out 0s;
+  opacity: 1;
+  font-size: 1rem;
+  text-overflow: ellipsis;
+  transition: opacity 0.3s ease 0s;
 }
 
 input::-moz-placeholder {
-    opacity: 1;
-    font-size: 1rem;
-    text-overflow: ellipsis;
-    -webkit-transition: opacity 0.3s ease-in-out 0s;
-    transition: opacity 0.3s ease-in-out 0s;
+  opacity: 1;
+  font-size: 1rem;
+  text-overflow: ellipsis;
+  transition: opacity 0.3s ease 0s;
 }
 
 input:-moz-placeholder {
-    opacity: 1;
-    font-size: 1rem;
-    text-overflow: ellipsis;
-    -webkit-transition: opacity 0.3s ease-in-out 0s;
-    transition: opacity 0.3s ease-in-out 0s;
+  opacity: 1;
+  font-size: 1rem;
+  text-overflow: ellipsis;
+  transition: opacity 0.3s ease 0s;
 }
 
 input:-ms-input-placeholder {
-    opacity: 1;
-    font-size: 1rem;
-    text-overflow: ellipsis;
-    -webkit-transition: opacity 0.3s ease-in-out 0s;
-    transition: opacity 0.3s ease-in-out 0s;
+  opacity: 1;
+  font-size: 1rem;
+  text-overflow: ellipsis;
+  transition: opacity 0.3s ease 0s;
 }
 
 input:focus::-webkit-input-placeholder {
-    opacity: 0;
+  opacity: 0;
 }
 
 input:focus::-moz-placeholder {
-    opacity: 0;
+  opacity: 0;
 }
 
 input:focus:-moz-placeholder {
-    opacity: 0;
+  opacity: 0;
 }
 
 input:focus:-ms-input-placeholder {
-    opacity: 0;
+  opacity: 0;
 }
+/* stylelint-enable selector-no-vendor-prefix */
 
 .button {
-    font-size: 1rem;
-    font-family: inherit;
-    display: inline-block;
-    border: 0.0625em solid currentColor;
-    background: none;
-    cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+  display: inline-block;
+  border: 0.0625em solid currentColor;
+  background: none;
+  cursor: pointer;
 }
 
 /*  ######
     utils
-    ######*/
+    ###### */
 
 /* ##########
    A11Y utils
-   ##########*/
+   ########## */
+
 /**
  * Apply on elements to hide text on screen but allow visible to assistive technologies
  */
 .a11yText {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 /* #######################
    Block Formating Context
-   #######################*/
+   ####################### */
+
 /**
  * Establish a new block formatting context *(https://www.w3.org/TR/css3-box/#block-level0)
  */
 .nbfc {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 /**
  * Establish a new block formatting context to contain elements that may lead to reflow/repaint due to properties such as : animations, transitions, transforms etc..
  */
 .nbfc_A {
-    position: absolute;
+  position: absolute;
 }
 
 /* #########
    Clearfix
-   #########*/
+   ######### */
+
 /*
  * Use to contain floated elements and establish a new block formatting context
- *http://fuseinteractive.ca/blog/understanding-humble-clearfix#.Vrax2rkrKoY
+ * http://fuseinteractive.ca/blog/understanding-humble-clearfix#.Vrax2rkrKoY
  */
 .cf {
-    *zoom: 1;
+  *zoom: 1;
 }
 
-.cf:before,
-.cf:after {
-    content: " ";
-    display: table;
+.cf::before,
+.cf::after {
+  content: " ";
+  display: table;
 }
 
-.cf:after {
-    clear: both;
+.cf::after {
+  clear: both;
 }
 
 /* #############
    Display Utils
-   #############*/
+   ############# */
+
 /**
  * Element is not present to the user & assistive technologies
  */
 .isRemoved {
-    display: none !important;
-    visibility: hidden;
+  display: none !important;
+  visibility: hidden;
 }
 
 /**
  * Element is present to the user & assistive technologies
  */
 .isRevealed {
-    display: block !important;
-    visibility: visible;
+  display: block !important;
+  visibility: visible;
 }
 
 .isHidden {
-    opacity: 0;
-    visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .isVisible {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 /* ############
    Layout Utils
-   ############*/
+   ############ */
 .fl {
-    float: left;
+  float: left;
 }
 
 .fr {
-    float: right;
+  float: right;
 }
 
 .center {
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
 /* ###########
    Skin Utils
-   ###########*/
+   ########### */
+
 /*
  * Use to decouple skin from structure on objects or components
  */
 
 .border {
-    border: 0.0625em solid;
-    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  border: 0.0625em solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
 }
 
 .hardShadow {
-    box-shadow: 0 0.0625em 0.125em rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.0625em 0.125em rgba(0, 0, 0, 0.5);
 }
 
 .softShadow {
-    box-shadow: 0 0.0625em 0.25em 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.0625em 0.25em 0 rgba(0, 0, 0, 0.2);
 }
 
 /* ###########
    Text Utils
-   ###########*/
+   ########### */
 .alignRight {
-    text-align: right;
+  text-align: right;
 }
 
 .alignCenter {
-    text-align: center;
+  text-align: center;
 }
 
 /**
@@ -262,64 +265,65 @@ input:focus:-ms-input-placeholder {
 
 /* ###########
    Media Utils
-   ###########*/
+   ########### */
+
 /**
  * Establish a ratio aware video container
  * TODO: 4:3
  */
 .videoContainer {
-    padding-top: 56.25%;
-    position: relative;
+  padding-top: 56.25%;
+  position: relative;
 }
 
 .videoContainer video,
 .videoContainer iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 
 /* ##############
     SPACING UTILS
-   #############*/
+   ############# */
 
 /* Vertical */
-.clearBottomSm{
-    margin-bottom: 1.875rem;
+.clearBottomSm {
+  margin-bottom: 1.875rem;
 }
 
 .clearBottomMd {
-    margin-bottom: 3.75em;
+  margin-bottom: 3.75em;
 }
 
 .clearBottomLg {
-    margin-bottom: 25em;
+  margin-bottom: 25em;
 }
 
 /* Horizontal */
-.clearLeftSm + .clearLeftSm{
-    margin-left: 0.3125em;
+.clearLeftSm + .clearLeftSm {
+  margin-left: 0.3125em;
 }
 
-.clearRightSm + .clearRightSm{
-    margin-right: 0.3125em;
+.clearRightSm + .clearRightSm {
+  margin-right: 0.3125em;
 }
 
-.clearLeftMd + .clearLeftMd{
-    margin-left: 1.125em;
+.clearLeftMd + .clearLeftMd {
+  margin-left: 1.125em;
 }
 
-.clearRightMd + .clearRightMd{
-    margin-right: 1.125em;
+.clearRightMd + .clearRightMd {
+  margin-right: 1.125em;
 }
 
-.clearLeftLg + .clearLeftLg{
-    margin-left: 1.875em;
+.clearLeftLg + .clearLeftLg {
+  margin-left: 1.875em;
 }
 
-.clearRightLg + .clearRightLg{
-    margin-right: 1.875em;
+.clearRightLg + .clearRightLg {
+  margin-right: 1.875em;
 }
