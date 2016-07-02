@@ -69,7 +69,7 @@
  * Interaction states for hidden footer-content
  */
 .flyOut {
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease;
   transform: translateY(3.75em);
 
   /*

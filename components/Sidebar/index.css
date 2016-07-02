@@ -7,7 +7,7 @@
   flex-direction: column;
   max-width: 5em;
   background-color: themeB;
-  transition: transform 0.75s ease-in-out;
+  transition: transform 0.75s ease;
 
   /* Positioning styles */
   position: fixed;

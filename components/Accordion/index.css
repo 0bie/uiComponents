@@ -23,7 +23,7 @@
 
 .title::before,
 .title::after {
-  transition: transform 0s ease-in-out 0s;
+  transition: transform 0s ease 0s;
   position: absolute;
   top: 5px;
   content: "";

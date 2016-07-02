@@ -119,3 +119,9 @@
   flex: 1 0 auto;
   margin: 0;
 }
+
+/* Border */
+.inline .button:not(:last-child),
+.block .button:not(:last-child) {
+  border-right-width: 0;
+}

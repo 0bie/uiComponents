@@ -44,33 +44,31 @@
   padding-bottom: 1.4375em;
 }
 
-.input-group .input {
-  margin: 0;
-}
 
-/* Input Group Display */
+/* Input Group */
 
+/* Display */
 .inline {
-  composes: input-group;
-  composes: alignCenter from "../global.css"; /* stylelint-disable-line declaration-block-no-duplicate-properties */
+  composes: alignCenter from "../global.css";
   display: inline-flex;
 }
 
 .block {
-  composes: input-group;
-  composes: alignCenter from "../global.css"; /* stylelint-disable-line declaration-block-no-duplicate-properties */
+  composes: alignCenter from "../global.css";
   display: flex;
 }
 
 .block .input,
-.inline input {
+.inline .input {
   flex: 1;
   text-align: inherit;
+  margin: 0;
 }
 
-.block .input + .input,
-.inline input + .input {
-  border-left: 0;
+/* Border */
+.block .input:not(:last-child),
+.inline .input:not(:last-child) {
+  border-right: 0;
 }
 
 /* States */
