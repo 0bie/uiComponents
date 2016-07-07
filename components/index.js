@@ -31,14 +31,13 @@ import Media from './Media';
 import Playlist from './Playlist';
 import PlaylistItem from './PlaylistItem';
 import Sidebar from './Sidebar';
-import Sortable from './Sortable';
 import SubscribeForm from './SubscribeForm';
 import Spinner from './Spinner';
 import TabSet from './TabSet';
 import TabSection from './TabSection';
 
 // Define constants for each Component
-// E.g `const variableName = document.getElementById('dom-node');`
+// E.g `const componentName = document.getElementById('dom-node');`
 const accordion = document.getElementById('accordion');
 const button = document.getElementById('button');
 const card_1 = document.getElementById('card1');
@@ -463,24 +462,25 @@ render(
     </ul>
   }>
     <Button size="sm">Button-sm</Button>
-    <Button size="md" type="raised">Button-md</Button>
+    <Button type="raised">Button-md</Button>
     <Button size="lg">Button-lg</Button>
     <Button isLoading size="lg" shape="circle">Button</Button>
     <Button size="sm" icon="search11">Button-sm</Button>
-    <Button size="md" type="raised" icon="mail18" disabled>Button-md</Button><br/><br/>
+    <Button type="raised" icon="mail18" disabled>Button-md</Button>
+    <Button size="sm" type="raised" icon="mail18" /><br/><br/>
     <Button size="xl" disabled>Button-xl</Button><br/><br/>
     <header>
       <h1 className={g.alignCenter}>Button Group</h1>
     </header>
     <ButtonGroup display="inline">
-      <Button size="md">Inline</Button>
-      <Button size="md">Inline</Button>
-      <Button size="md">Inline</Button>
+      <Button>Inline</Button>
+      <Button>Inline</Button>
+      <Button>Inline</Button>
     </ButtonGroup><br /><br />
     <ButtonGroup display="block">
-      <Button size="md">Block</Button>
-      <Button size="md">Block</Button>
-      <Button size="md">Block</Button>
+      <Button>Block</Button>
+      <Button>Block</Button>
+      <Button>Block</Button>
     </ButtonGroup>
   </Container>, button
 );
