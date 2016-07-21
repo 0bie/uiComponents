@@ -19,6 +19,9 @@ import Carousel from './Carousel';
 import CarouselItem from './CarouselItem';
 import CommentBox from './CommentBox';
 import Container from './Container';
+import Form from './Form';
+import FormGroup from './FormGroup';
+import FormField from './FormField';
 import Icon from './Icon';
 import Image from './Image';
 import Input from './Input';
@@ -47,6 +50,7 @@ const cardlist = document.getElementById('cardlist');
 const carousel = document.getElementById('carousel');
 const commentBox = document.getElementById('commentbox');
 const container = document.getElementById('container');
+const form = document.getElementById('form');
 const icon = document.getElementById('icon');
 const image = document.getElementById('image');
 const input = document.getElementById('input');
@@ -442,7 +446,7 @@ render(
       <li>...</li>
     </ul>
   }>
-    <Sidebar items={[
+    <Sidebar position="right" items={[
       {item: '', children: <Button size="sm"><Icon name="avatar5" width={35} height={35} title="media1" /></Button>},
       {item: '', children: <Button size="sm"><Icon name="mail8" width={35} height={35} title="mail8" /></Button>},,
       {item: '', children:<Button size="sm"><Icon name="graph1" width={35} height={35} title="graph1" /></Button>},
@@ -512,4 +516,32 @@ render(
       <Input size="md" placeholder="Placeholder text" disabled  />
     </InputGroup>
   </Container>, input
+);
+
+render(
+  <Container title="form"
+  description={
+    <ul>
+      <li>A description of the form component.</li>
+      <li>Its usage and supported props</li>
+      <li>...</li>
+    </ul>
+  }>
+    <Form>
+      <FormField label="label">
+        <Input placeholder="Placeholder text" />
+      </FormField>
+      <FormField label="label">
+        <Input placeholder="Placeholder text" />
+      </FormField>
+      <FormGroup title="Title">
+        <FormField label="label">
+          <Input placeholder="Placeholder text" />
+        </FormField>
+        <FormField label="label" hint="hint text">
+          <Input placeholder="Placeholder text" />
+        </FormField>
+      </FormGroup>
+    </Form>
+  </Container>, form
 );

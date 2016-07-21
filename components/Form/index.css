@@ -1,0 +1,36 @@
+.root {
+  composes: border from "../global.css";
+  padding: 1em;
+  background-color: #f6f6f6;
+}
+
+.form-group {
+  composes: root;
+}
+
+.form-field {
+  display: block;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  margin-top: 0.3125em;
+  border-bottom: 1px solid rgba(85, 85, 85, 0.092);
+}
+
+.label {
+  display: block;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.hint {
+  font-size: 0.75rem;
+  display: block;
+}
