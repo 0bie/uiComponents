@@ -9,11 +9,6 @@
   width: 100%;
   padding-left: 0.625em;
   padding-right: 0.625em;
-
-  @media(--bp-md) {
-    width: auto;
-    margin-right: 1.125em;
-  }
 }
 
 /* Sizes */

@@ -8,7 +8,7 @@ const Input = ({ size, type, disabled, ...props }) => {
 
 Input.propTypes = {
   /** @type {string} Input type */
-  type: PropTypes.node,
+  type: PropTypes.string,
   /** @type {bool} If true, the input will have  a disabled state */
   disabled: PropTypes.bool,
   /** @type {array} Size */
