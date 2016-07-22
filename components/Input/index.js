@@ -14,13 +14,12 @@ Input.propTypes = {
   /** @type {array} Size */
   size: PropTypes.oneOf(['sm', 'md', 'lg', 'xl']),
   /** @type {string} Placeholder */
-  placeholder: PropTypes.string.isRequired
+  placeholder: PropTypes.string
 };
 
 Input.defaultProps = {
   type: 'text',
-  size: 'md',
-  placeholder: ''
+  size: 'md'
 };
 
 export default CSSModules(Input, styles);

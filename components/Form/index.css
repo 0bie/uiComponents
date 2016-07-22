@@ -6,6 +6,11 @@
 
 .form-group {
   composes: root;
+
+  @media(max-width: 24.9375em) {
+    border: 0;
+    padding: 0;
+  }
 }
 
 .form-field {
@@ -27,10 +32,34 @@
 .label {
   display: block;
   font-size: 1rem;
-  text-transform: capitalize;
 }
 
 .hint {
   font-size: 0.75rem;
   display: block;
+}
+
+.textarea {
+  composes: border from "../global.css";
+  font: inherit;
+  display: block;
+  width: 100%;
+  padding: 0.65em;
+  background-color: #fff;
+  resize: none;
+}
+
+/* Sizes */
+@media(min-width: 48.75em) {
+  .sm {
+    max-width: 15%;
+  }
+
+  .md {
+    max-width: 35%;
+  }
+
+  .lg {
+    max-width: 75%;
+  }
 }

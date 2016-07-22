@@ -38,6 +38,7 @@ import SubscribeForm from './SubscribeForm';
 import Spinner from './Spinner';
 import TabSet from './TabSet';
 import TabSection from './TabSection';
+import TextField from './TextField';
 
 // Define constants for each Component
 // E.g `const componentName = document.getElementById('dom-node');`
@@ -528,18 +529,33 @@ render(
     </ul>
   }>
     <Form>
-      <FormField label="label">
+      <FormField label="Label">
         <Input placeholder="Placeholder text" />
       </FormField>
-      <FormField label="label">
+      <FormField label="Label">
         <Input placeholder="Placeholder text" />
       </FormField>
       <FormGroup title="Title">
-        <FormField label="label">
+        <FormField label="Label" size="sm">
+          <Input type="time" />
+        </FormField>
+        <FormField label="Label" size="sm">
+          <Input placeholder="V9R5H3" />
+        </FormField>
+        <FormField label="Label" hint="Hint text">
           <Input placeholder="Placeholder text" />
         </FormField>
-        <FormField label="label" hint="hint text">
+        <FormField label="Label" hint="Hint text">
           <Input placeholder="Placeholder text" />
+        </FormField>
+        <FormField label="Label" hint="Hint text">
+          <Input type="date" />
+        </FormField>
+        <FormField label="Label" hint="Hint text">
+          <Input type="time" />
+        </FormField>
+        <FormField label="Label" hint="Hint text">
+          <TextField placeholder="Placeholder text" />
         </FormField>
       </FormGroup>
     </Form>
