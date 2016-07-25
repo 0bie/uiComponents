@@ -31,6 +31,7 @@ import ListItem from './ListItem';
 import MainNav from './MainNav';
 import MainNavForm from './MainNavForm';
 import Media from './Media';
+import Menu from './Menu';
 import Playlist from './Playlist';
 import PlaylistItem from './PlaylistItem';
 import Sidebar from './Sidebar';
@@ -61,6 +62,7 @@ const sortable = document.getElementById('sortable');
 const spinner = document.getElementById('spinner');
 const mainNav = document.getElementById('nav');
 const media = document.getElementById('media');
+const menu = document.getElementById('menu');
 const playlist = document.getElementById('playlist');
 const subscribeform = document.getElementById('subscribeform');
 const tabset = document.getElementById('tabset');
@@ -560,4 +562,24 @@ render(
       </FormGroup>
     </Form>
   </Container>, form
+);
+
+render(
+  <Container title="menu"
+  description={
+    <ul>
+      <li>A description of the menu component.</li>
+      <li>Its usage and supported props</li>
+      <li>...</li>
+    </ul>
+  }>
+    <Menu header="Go to" items={[
+        {title: '', children: <a>Item 1</a>},
+        {title: '', children: <a>Item 2</a>},
+        {title: '', children: <a>Item 3</a>},
+        {title: '', children: <div styleName="divider" />},
+        {title: '', children: <a>Item 4</a>},
+        {title: '', children: <a>Item 5</a>}
+      ]}/>
+  </Container>, menu
 );
