@@ -5,7 +5,7 @@ import { renderItems } from '../utils/item';
 
 const Menu = ({ items, header, ...props }) => {
   return (
-    <nav>
+    <nav {...props}>
       <ul styleName="menu">
         {header ? <li styleName="header"><span>{header}</span></li> : null}
         {renderItems(items)}
