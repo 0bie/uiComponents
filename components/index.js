@@ -402,11 +402,11 @@ render(
     </ul>
   }>
     <List items={[
-      {title: "Item 1", children: null },
-      {title: "Item 2", children: null },
-      {title: "Item 3", children: null },
-      {title: "Item 4", children: null },
-      {title: "Item 5", children: null }
+      {title: 'Item 1', children: null },
+      {title: 'Item 2', children: null },
+      {title: 'Item 3', children: null },
+      {title: 'Item 4', children: null },
+      {title: 'Item 5', children: null }
     ]}/>
     <br />
     <br />
@@ -574,12 +574,25 @@ render(
     </ul>
   }>
     <Menu header="Go to" items={[
-        {title: '', children: <a>Item 1</a>},
-        {title: '', children: <a>Item 2</a>},
-        {title: '', children: <a>Item 3</a>},
-        {title: '', children: <div styleName="divider" />},
-        {title: '', children: <a>Item 4</a>},
-        {title: '', children: <a>Item 5</a>}
+        {title: null, children: <a>Item 1</a>},
+        {title: null, children: <a>Item 2</a>},
+        {title: null, children: <a>Item 3</a>},
+        {title: null, children: <div styleName="divider" />},
+        {title: null, children: <a>Item 4</a>},
+        {title: null, children: <a>Item 5</a>}
+      ]}/>
+    <br /><br/>
+    <Menu items={[
+        {title: null, children: <div><Icon name="menu1" title="menu icon" size="sm"/><span>MENU</span></div>},
+        {title: null, children: <div styleName="divider" />},
+        {title: null, children: <div><Icon name="mail19" title="media icon" size="sm"/><a>Inbox</a></div>},
+        {title: null, children: <div><Icon name="shoppingCart6" title="shopping cart icon" size="sm"/><a>My Bag</a></div>},
+        {title: null, children: <div><Icon name="fave4" title="favorite icon" size="sm"/><a>My Favorites</a></div>},
+        {title: null, children: <div styleName="divider" />},
+        {title: null, children: <div><Icon name="settings1" title="media icon" size="sm"/><a>Settings</a></div>},
+        {title: null, children: <div><Icon name="graph1" title="media icon" size="sm"/><a>Statistics</a></div>},
+        {title: null, children: <div styleName="divider" />},
+        {title: null, children: <div><Icon name="calendar1" title="calendar icon" size="sm"/><a>Calendar</a></div>}
       ]}/>
   </Container>, menu
 );

@@ -35,9 +35,22 @@
 }
 
 .item a {
-  display: block;
+  display: inline-block;
   padding: 0.125em 0.625em;
   color: inherit;
+}
+
+.item svg,
+.item span {
+  vertical-align: middle;
+}
+
+.item span {
+  font-weight: 700;
+}
+
+.item svg {
+  margin-right: 0.5em;
 }
 
 .divider {
