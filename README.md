@@ -34,6 +34,6 @@ A set of UI components built using [React](https://facebook.github.io/react/)
 #TODO:
 - [ ] Unit Tests
 - [ ] Responsive Tests
-- [ ] Support asset and JSON loading
+- [x] Support asset and JSON loading
 - [ ] Refactor components
 - [ ] Build more components...
