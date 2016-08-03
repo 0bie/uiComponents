@@ -14,7 +14,7 @@ const SubscribeForm = ({ placeholder, message, action }) => {
         </label>
         <input styleName="button" type="submit" value={action}/>
         <div styleName="message">
-          <Checkbox label={message} />
+          <Checkbox label={message} defaultChecked />
         </div>
       </form>
     </div>

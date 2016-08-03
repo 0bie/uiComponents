@@ -623,6 +623,6 @@ render(
       <li>...</li>
     </ul>
   }>
-    <Radio />
+    <Radio defaultChecked />
   </Container>, radio
 );
