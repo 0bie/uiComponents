@@ -17,6 +17,7 @@ import Cardlist from './Cardlist';
 import CardlistItem from './CardlistItem';
 import Carousel from './Carousel';
 import CarouselItem from './CarouselItem';
+import Checkbox from './Checkbox';
 import CommentBox from './CommentBox';
 import Container from './Container';
 import Form from './Form';
@@ -33,6 +34,7 @@ import MainNavForm from './MainNavForm';
 import Media from './Media';
 import Menu from './Menu';
 import Playlist from './Playlist';
+import Radio from './Radio';
 import PlaylistItem from './PlaylistItem';
 import Sidebar from './Sidebar';
 import SubscribeForm from './SubscribeForm';
@@ -50,6 +52,7 @@ const card_2 = document.getElementById('card2');
 const card_3 = document.getElementById('card3');
 const cardlist = document.getElementById('cardlist');
 const carousel = document.getElementById('carousel');
+const checkbox = document.getElementById('checkbox');
 const commentBox = document.getElementById('commentbox');
 const container = document.getElementById('container');
 const form = document.getElementById('form');
@@ -64,6 +67,7 @@ const mainNav = document.getElementById('nav');
 const media = document.getElementById('media');
 const menu = document.getElementById('menu');
 const playlist = document.getElementById('playlist');
+const radio = document.getElementById('radio');
 const subscribeform = document.getElementById('subscribeform');
 const tabset = document.getElementById('tabset');
 
@@ -595,4 +599,30 @@ render(
         {title: null, children: <div><Icon name="calendar1" title="calendar icon" size="sm"/><a>My Calendar</a></div>}
       ]}/>
   </Container>, menu
+);
+
+render(
+  <Container title="checkbox"
+  description={
+    <ul>
+      <li>A description of the checkbox component.</li>
+      <li>Its usage and supported props</li>
+      <li>...</li>
+    </ul>
+  }>
+    <Checkbox />
+  </Container>, checkbox
+);
+
+render(
+  <Container title="radio"
+  description={
+    <ul>
+      <li>A description of the radio component.</li>
+      <li>Its usage and supported props</li>
+      <li>...</li>
+    </ul>
+  }>
+    <Radio />
+  </Container>, radio
 );
