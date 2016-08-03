@@ -147,7 +147,7 @@ render(
           {name: 'instagram', color: '#fff', title: "Instagram icon", desc: 'Share on Instagram'}
         ]}>
           <CardItem>
-            <Image src="assets/black-rect.jpg" alt="alternate text" />
+            <Image src={require('../assets/black-rect.jpg')} alt="alternate text" />
           </CardItem>
         </Card>
   </Container>, card_1
@@ -198,16 +198,16 @@ render(
       }>
         <Cardlist>
           <CardlistItem title="Card Title" subtitle="Card Subtitle/Author" details="extra details..." >
-            <Image src="assets/yellow.jpg" alt="alt text" />
+            <Image src={require('../assets/yellow.jpg')} alt="alt text" />
           </CardlistItem>
           <CardlistItem title="Card Title" subtitle="Card Subtitle/Author" details="extra details...">
-            <Image src="assets/blue.jpg" alt="alt text" />
+            <Image src={require('../assets/blue.jpg')} alt="alt text" />
           </CardlistItem>
           <CardlistItem title="Card Title" subtitle="Card Subtitle/Author" details="extra details...">
-            <Image src="assets/orange.jpg" alt="alt text" />
+            <Image src={require('../assets/orange.jpg')} alt="alt text" />
           </CardlistItem>
           <CardlistItem title="Card Title" subtitle="Card Subtitle/Author" details="extra details...">
-            <Image src="assets/black.jpg" alt="alt text" />
+            <Image src={require('../assets/black.jpg')} alt="alt text" />
           </CardlistItem>
         </Cardlist>
   </Container>, cardlist
@@ -379,16 +379,16 @@ render(
       <li>...</li>
     </ul>
   }>
-    <Image src="assets/yellow.jpg" size="xsm" alt="placeholder text"/>
-    <Image src="assets/orange.jpg" size="sm" alt="placeholder text"/>
-    <Image src="assets/blue.jpg" size="md" alt="placeholder text"/>
-    <Image src="assets/black.jpg" size="lg"  alt="placeholder text"/>
-    {/*<Image src="assets/yellow.jpg" size="xl" shape="circle" alt="placeholder text"/>*/}
+    <Image src={require('../assets/yellow.jpg')} size="xsm" alt="placeholder text"/>
+    <Image src={require('../assets/orange.jpg')} size="sm" alt="placeholder text"/>
+    <Image src={require('../assets/blue.jpg')} size="md" alt="placeholder text"/>
+    <Image src={require('../assets/black.jpg')} size="lg"  alt="placeholder text"/>
+    {/*<Image src={require('../assets/yellow.jpg')} size="xl" shape="circle" alt="placeholder text"/>*/}
     <br/><br/>
-    <Image src="assets/blue.jpg" size="xsm" shape="circle" alt="placeholder text"/>
-    <Image src="assets/black.jpg" size="sm" shape="circle" alt="placeholder text"/>
-    <Image src="assets/orange.jpg" size="md" shape="circle" alt="placeholder text"/>
-    <Image src="assets/yellow.jpg" size="lg" shape="circle" alt="placeholder text"/>
+    <Image src={require('../assets/blue.jpg')} size="xsm" shape="circle" alt="placeholder text"/>
+    <Image src={require('../assets/black.jpg')} size="sm" shape="circle" alt="placeholder text"/>
+    <Image src={require('../assets/orange.jpg')} size="md" shape="circle" alt="placeholder text"/>
+    <Image src={require('../assets/yellow.jpg')} size="lg" shape="circle" alt="placeholder text"/>
   </Container>, image
 );
 
@@ -413,27 +413,27 @@ render(
       <List hasHover isExpandable>
         <ListItem>
           <Media>
-            <Image size="xsm" shape="circle" src="assets/blue.jpg" />
+            <Image size="xsm" shape="circle" src={require('../assets/blue.jpg')} />
           </Media>
         </ListItem>
         <ListItem>
           <Media>
-            <Image size="xsm" shape="circle" src="assets/yellow.jpg" />
+            <Image size="xsm" shape="circle" src={require('../assets/yellow.jpg')} />
           </Media>
         </ListItem>
         <ListItem>
           <Media>
-            <Image size="xsm" shape="circle" src="assets/black.jpg" />
+            <Image size="xsm" shape="circle" src={require('../assets/black.jpg')} />
           </Media>
         </ListItem>
         <ListItem>
           <Media>
-            <Image size="xsm" shape="circle" src="assets/orange.jpg" />
+            <Image size="xsm" shape="circle" src={require('../assets/orange.jpg')} />
           </Media>
         </ListItem>
         <ListItem>
           <Media>
-            <Image size="xsm" shape="circle" src="assets/blue.jpg" />
+            <Image size="xsm" shape="circle" src={require('../assets/blue.jpg')} />
           </Media>
         </ListItem>
       </List>
