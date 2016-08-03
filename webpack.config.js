@@ -16,13 +16,26 @@ module.exports = {
                 test: /\.json$/,
                 exclude: /node_modules/,
                 include: path.join(__dirname, 'components'),
-                loader: "json"
+                loader: 'json'
             },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 include: path.join(__dirname, 'components'),
-                loader: 'babel'
+                loader: 'babel',
+                query: {
+                    'presets': ['es2015', 'stage-0', 'react'],
+                    "plugins": [
+                        "transform-react-jsx",
+                        ["react-transform", {
+                            "transforms": [{
+                                "transform": "react-transform-hmr",
+                                "imports": ["react"],
+                                "locals": ["module"]
+                            }]
+                        }]
+                    ]
+                }
             },
             {
                 test: /\.css$/,
@@ -32,6 +45,12 @@ module.exports = {
                     'style?sourceMap',
                     'css?modules&importLoaders=1&localIdentName=[local]___[hash:base64:5]!postcss-loader'
                 ]
+            },
+            {
+                test: /\.jpg|\.jpeg|\.png|\.svg$/,
+                exclude: /node_modules/,
+                include: path.join(__dirname, 'assets/'),
+                loader: 'url-loader?limit=10000&name=assets/[name].[ext]'
             }
         ]
     },

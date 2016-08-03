@@ -4,7 +4,6 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    devtool: 'eval-source-map',
     entry: __dirname + "/components/index.js",
     output: {
         path: __dirname + "/build",
@@ -23,19 +22,28 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 include: path.join(__dirname, 'components'),
-                loader: 'babel'
+                loader: 'babel',
+                query: {
+                    'presets': ['es2015', 'stage-0', 'react']
+                }
             },
             {
                 test: /\.css$/,
                 exclude: /node_modules/,
                 include: path.join(__dirname, 'components'),
-                loader: ExtractTextPlugin.extract('style', 'css?modules!postcss')
+                loader: ExtractTextPlugin.extract('style', 'css?modules&-autoprefixer&!postcss')
+            },
+            {
+                test: /\.jpg|\.jpeg|\.png|\.svg$/,
+                exclude: /node_modules/,
+                include: path.join(__dirname, 'assets/'),
+                loader: 'url-loader?limit=10000&name=assets/[name].[ext]'
             }
         ]
     },
 
     postcss: [
-        require('autoprefixer'),
+        require('autoprefixer')({browsers: ['> 0%']}),
         require('postcss-nested'),
         require('postcss-css-variables'),
         require('postcss-color-function'),
