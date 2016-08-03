@@ -6,7 +6,7 @@ import g from '../global.css';
 const Checkbox = ({ label, name, id, ...props }) => {
   return (
     <label styleName="root">
-      <input type="checkbox" name={name} id={id} className={g.a11yText}/>
+      <input type="checkbox" name={name} id={id} className={g.a11yText} {...props} />
       <span styleName="checkbox" />
       {label ? <span styleName="label">{label}</span> : null}
     </label>
@@ -19,7 +19,7 @@ Checkbox.propTypes = {
   /** @type {name} Name */
   name: PropTypes.string,
   /** @type {string} Id */
-  id: PropTypes.string,
+  id: PropTypes.string
 };
 
 Checkbox.defaultProps = {

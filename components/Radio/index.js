@@ -6,7 +6,7 @@ import g from '../global.css';
 const Radio = ({ label, name, ...props }) => {
   return (
     <label styleName="root">
-      <input className={g.a11yText} type="radio" name={name} />
+      <input className={g.a11yText} type="radio" name={name} {...props} />
       <span styleName="radio" />
       {label ? <span styleName="label">{label}</span> : null}
     </label>
@@ -19,7 +19,7 @@ Radio.propTypes = {
   /** @type {name} Name */
   name: PropTypes.string,
   /** @type {string} Id */
-  id: PropTypes.string,
+  id: PropTypes.string
 };
 
 Radio.defaultProps = {
