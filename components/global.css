@@ -1,11 +1,15 @@
 @charset "UTF-8";
 
+:root {
+  --system: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
 /*  #######
     globals
     ####### */
 
 html {
-  font: normal 100%/1.5 "Lato", sans-serif;
+  font: normal 100%/1.5 var(--system);
   box-sizing: border-box;
 }
 
