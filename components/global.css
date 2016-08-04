@@ -4,12 +4,15 @@
   --system: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
+/* Theme */
+@value themeA from "./theme.css";
+
 /*  #######
     globals
     ####### */
 
 html {
-  font: normal 100%/1.5 var(--system);
+  font: normal 100%/1.5 var(--system, "Lato", sans-serif);
   box-sizing: border-box;
 }
 
@@ -23,7 +26,7 @@ html {
 
 body {
   background: #fff;
-  color: #222;
+  color: themeA;
 }
 
 ol,
