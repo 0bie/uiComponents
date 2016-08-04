@@ -3,15 +3,15 @@ import CSSModules from 'react-css-modules';
 import styles from './index.css';
 import { renderIcon } from '../utils/icon';
 
-const Button = ({ children, size, shape, type, isLoading, icon, iconPos, ...props }) => {
+const Button = ({ children, size, shape, type, isLoading, icon, iconPosition, ...props }) => {
   const btnType = type ? styles[type] : '';
   const btnShape = shape ? styles[shape] : '';
   const loading = isLoading ? styles.loading : '';
   return (
     <button styleName={size} className={`${btnType} ${btnShape} ${loading}`} {...props}>
-      {iconPos === 'left' ? renderIcon(icon, size) : null}
+      {iconPosition === 'left' ? renderIcon(icon, size) : null}
       {children}
-      {iconPos === 'right' ? renderIcon(icon, size) : null}
+      {iconPosition === 'right' ? renderIcon(icon, size) : null}
     </button>
   );
 };
@@ -32,12 +32,12 @@ Button.propTypes = {
   /** @type {string} Button icon */
   icon: PropTypes.string,
   /** @type {array} Icon position */
-  iconPos: PropTypes.oneOf(['left', 'right'])
+  iconPosition: PropTypes.oneOf(['left', 'right'])
 };
 
 Button.defaultProps = {
   size: 'md',
-  iconPos: 'left'
+  iconPosition: 'left'
 };
 
 export default CSSModules(Button, styles);
