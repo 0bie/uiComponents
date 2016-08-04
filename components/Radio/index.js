@@ -25,7 +25,6 @@ Radio.propTypes = {
 };
 
 Radio.defaultProps = {
-  label: 'Radio label',
   size: 'md'
 };
 

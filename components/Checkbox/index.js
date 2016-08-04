@@ -28,7 +28,6 @@ Checkbox.propTypes = {
 };
 
 Checkbox.defaultProps = {
-  label: 'Checkbox label',
   size: 'md'
 };
 
