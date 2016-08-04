@@ -551,7 +551,7 @@ render(
       </FormField>
       <FormGroup title="Title">
         <FormField label="Label" size="sm">
-          <Input type="time" />
+          <Input type="time" placeholder="00:00 HH"/>
         </FormField>
         <FormField label="Label" size="sm">
           <Input placeholder="V9R5H3" />
