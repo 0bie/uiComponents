@@ -12,11 +12,15 @@
 
 .label {
   display: block;
-  margin-bottom: 0.9375em;
+  margin-bottom: 1em;
 
   @media (--bp) {
     position: relative;
   }
+}
+
+.label input {
+  margin-bottom: 0;
 }
 
 .label button {
@@ -27,7 +31,12 @@
   @media (--bp) {
     position: absolute;
     top: 0;
+    bottom: 0;
     right: 0;
     width: auto;
   }
+}
+
+.title {
+  composes: a11yText from "../global.css";
 }
