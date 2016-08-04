@@ -79,15 +79,23 @@ render(
   <MainNav>
     <MainNavForm options={[
       'accordion',
+      'button',
       'card1',
       'card2',
       'card3',
       'cardlist',
       'carousel',
+      'checkbox',
       'commentbox',
+      'form',
       'image',
+      'input',
       'list',
+      'media',
+      'menu',
       'playlist',
+      'radio',
+      'sidebar',
       'spinner',
       'subscribe',
       'tabset'
