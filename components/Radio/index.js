@@ -3,12 +3,12 @@ import CSSModules from 'react-css-modules';
 import styles from './index.css';
 import g from '../global.css';
 
-const Radio = ({ label, name, ...props }) => {
+const Radio = ({ label, name, size, ...props }) => {
+  const radioSize = size ? styles[size] : null;
   return (
     <label styleName="root">
-      <input className={g.a11yText} type="radio" name={name} {...props} />
-      <span styleName="radio" />
-      {label ? <span styleName="label">{label}</span> : null}
+      <input type="radio" name={name} styleName="radio" className={g.a11yText} {...props} />
+      <div className={radioSize}>{label ? <span styleName="label">{label}</span> : null}</div>
     </label>
   );
 };
@@ -19,11 +19,14 @@ Radio.propTypes = {
   /** @type {name} Name */
   name: PropTypes.string,
   /** @type {string} Id */
-  id: PropTypes.string
+  id: PropTypes.string,
+  /** @type {array} Default sizes */
+  size: PropTypes.oneOf(['sm', 'md', 'lg'])
 };
 
 Radio.defaultProps = {
-  label: 'Radio label'
+  label: 'Radio label',
+  size: 'md'
 };
 
 export default CSSModules(Radio, styles);

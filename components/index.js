@@ -618,7 +618,10 @@ render(
       <li>...</li>
     </ul>
   }>
-    <Checkbox />
+    <Checkbox size="sm" defaultChecked />
+    <Checkbox size="md" defaultChecked />
+    <Checkbox size="lg" defaultChecked />
+    <Checkbox size="lg" circle defaultChecked />
   </Container>, checkbox
 );
 
@@ -631,6 +634,8 @@ render(
       <li>...</li>
     </ul>
   }>
-    <Radio defaultChecked />
+    <Radio size="sm" defaultChecked />
+    <Radio size="md" defaultChecked />
+    <Radio size="lg" defaultChecked />
   </Container>, radio
 );
