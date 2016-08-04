@@ -1,7 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import CSSModules from 'react-css-modules';
 import styles from './index.css';
-import g from '../global.css';
 
 class TabSet extends Component {
   static propTypes = {
@@ -30,7 +29,7 @@ class TabSet extends Component {
     });
   }
   render() {
-    return <section className={g.clearBottomLg}>
+    return <section styleName="root">
       <ul styleName="list">
         {this.renderChildren()}
       </ul>

@@ -2,9 +2,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-// Import global css
-import g from './global.css';
-
 // Import individual Components
 // E.g `import ComponentName/ from './PATH/TO/Component.jsx';`
 import Accordion from './Accordion';
@@ -489,7 +486,7 @@ render(
     <Button size="sm" type="raised" icon="mail18" /><br/><br/>
     <Button size="xl" disabled>Button-xl</Button><br/><br/>
     <header>
-      <h1 className={g.alignCenter}>Button Group</h1>
+      <h1>Button Group</h1><br />
     </header>
     <ButtonGroup display="inline">
       <Button>Inline</Button>
@@ -518,8 +515,8 @@ render(
     <Input size="lg" placeholder="Placeholder text" />
     <Input size="xl" placeholder="Placeholder text" /><br/><br/>
     <header>
-      <h1 className={g.alignCenter}>Input Group</h1>
-    </header><br/><br/>
+      <h1>Input Group</h1>
+    </header><br/>
     <InputGroup display="inline">
       <Input size="md" placeholder="Placeholder text" />
       <Input size="md" placeholder="Placeholder text" />

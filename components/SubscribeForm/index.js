@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import CSSModules from 'react-css-modules';
 import styles from './index.css';
-import g from '../global.css';
 import Input from '../Input';
 import Button from '../Button';
 import Checkbox from '../Checkbox';
@@ -10,7 +9,7 @@ const SubscribeForm = ({ placeholder, message, action }) => {
   return (
     <form styleName="form">
       <label styleName="label">
-        <span className={g.a11yText}>{placeholder}</span>
+        <span styleName="title">{placeholder}</span>
         <Input type="email" name="subscribe_email" placeholder={placeholder} size="lg" required />
         <Button size="lg">{action}</Button>
       </label>

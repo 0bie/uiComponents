@@ -17,7 +17,8 @@
   composes: border from "../global.css";
   composes: clearLeftMd from "../global.css"; /* stylelint-disable-line declaration-block-no-duplicate-properties */
   font: inherit;
-  background: transparent;
+  background-color: transparent;
+  color: inherit;
   vertical-align: middle;
   cursor: pointer;
   white-space: nowrap;

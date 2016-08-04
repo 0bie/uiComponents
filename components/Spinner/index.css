@@ -33,14 +33,17 @@
 /* Sizes */
 
 .sm {
+  composes: center from "../global.css";
   width: var(--sm);
 }
 
 .md {
+  composes: center from "../global.css";
   width: var(--md);
 }
 
 .lg {
+  composes: center from "../global.css";
   width: var(--lg);
 }
 
