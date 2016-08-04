@@ -2,22 +2,22 @@ import React, { PropTypes } from 'react';
 import CSSModules from 'react-css-modules';
 import styles from './index.css';
 import g from '../global.css';
+import Input from '../Input';
+import Button from '../Button';
 import Checkbox from '../Checkbox';
 
 const SubscribeForm = ({ placeholder, message, action }) => {
   return (
-    <div styleName="root">
-      <form styleName="form">
-        <label styleName="label">
-          <span className={g.a11yText}>{placeholder}</span>
-          <input styleName="input-email" type="email" name="subscribe_email" placeholder={placeholder} required/>
-        </label>
-        <input styleName="button" type="submit" value={action}/>
-        <div styleName="message">
-          <Checkbox label={message} defaultChecked />
-        </div>
-      </form>
-    </div>
+    <form styleName="form">
+      <label styleName="label">
+        <span className={g.a11yText}>{placeholder}</span>
+        <Input type="email" name="subscribe_email" placeholder={placeholder} size="lg" required />
+        <Button size="lg">{action}</Button>
+      </label>
+      <div>
+        <Checkbox label={message} size="sm" defaultChecked />
+      </div>
+    </form>
   );
 };
 
