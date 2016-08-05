@@ -3,8 +3,8 @@
 }
 
 .input {
-  composes: border from "../global.css";
-  composes: clearBottomSm from "../global.css"; /* stylelint-disable-line declaration-block-no-duplicate-properties */
+  composes: border from "../utils/index.css";
+  composes: clearBottomSm from "../utils/index.css"; /* stylelint-disable-line declaration-block-no-duplicate-properties */
   font: inherit;
   width: 100%;
   padding-left: 0.625em;
@@ -42,12 +42,12 @@
 
 /* Display */
 .inline {
-  composes: alignCenter from "../global.css";
+  composes: alignCenter from "../utils/index.css";
   display: inline-flex;
 }
 
 .block {
-  composes: alignCenter from "../global.css";
+  composes: alignCenter from "../utils/index.css";
   display: flex;
 }
 

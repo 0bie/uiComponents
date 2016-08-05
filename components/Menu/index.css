@@ -1,5 +1,5 @@
 .menu {
-  composes: softShadow from "../global.css";
+  composes: softShadow from "../utils/index.css";
   padding: 0.3125em;
 }
 

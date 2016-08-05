@@ -1,9 +1,9 @@
 .container {
   /* stylelint-disable declaration-block-no-duplicate-properties */
-  composes: border from "../global.css";
-  composes: center from "../global.css";
-  composes: clearBottomMd from "../global.css";
-  composes: nbfc from "../global.css";
+  composes: border from "../utils/index.css";
+  composes: center from "../utils/index.css";
+  composes: clearBottomMd from "../utils/index.css";
+  composes: nbfc from "../utils/index.css";
   /* stylelint-enable declaration-block-no-duplicate-properties */
   max-width: 85%;
   padding: 1em;

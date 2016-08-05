@@ -15,7 +15,7 @@
 }
 
 .checkbox {
-  composes: a11yText from "../global.css";
+  composes: a11yText from "../utils/index.css";
 }
 
 .checkbox + div::before {

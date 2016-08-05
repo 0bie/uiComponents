@@ -2,6 +2,9 @@
 import React from 'react';
 import { render } from 'react-dom';
 
+// Import global css
+import styles from './global.css';
+
 // Import individual Components
 // E.g `import ComponentName/ from './PATH/TO/Component.jsx';`
 import Accordion from './Accordion';

@@ -1,5 +1,5 @@
 .root {
-  composes: nbfc from "../global.css";
+  composes: nbfc from "../utils/index.css";
   border: 1px solid #dbdbdb;
   position: relative;
 }

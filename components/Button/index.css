@@ -14,8 +14,8 @@
 }
 
 .button {
-  composes: border from "../global.css";
-  composes: clearLeftMd from "../global.css"; /* stylelint-disable-line declaration-block-no-duplicate-properties */
+  composes: border from "../utils/index.css";
+  composes: clearLeftMd from "../utils/index.css"; /* stylelint-disable-line declaration-block-no-duplicate-properties */
   font: inherit;
   background-color: transparent;
   color: inherit;

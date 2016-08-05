@@ -15,7 +15,7 @@
 }
 
 .radio {
-  composes: a11yText from "../global.css";
+  composes: a11yText from "../utils/index.css";
 }
 
 .radio + div::before {

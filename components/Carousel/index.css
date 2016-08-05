@@ -6,7 +6,7 @@
 }
 
 .carousel {
-  composes: border from "../global.css";
+  composes: border from "../utils/index.css";
   position: relative;
   height: 20em;
 }

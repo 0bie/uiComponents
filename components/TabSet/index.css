@@ -2,7 +2,7 @@
 @value themeA from "../theme.css";
 
 .root {
-  composes: clearBottomLg from "../global.css";
+  composes: clearBottomLg from "../utils/index.css";
 }
 
 .list {

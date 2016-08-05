@@ -19,8 +19,10 @@
   }
 }
 
-.label input {
-  margin-bottom: 0;
+@media(--bp) {
+  .label input {
+    margin-bottom: 0;
+  }
 }
 
 .label button {
@@ -38,5 +40,5 @@
 }
 
 .title {
-  composes: a11yText from "../global.css";
+  composes: a11yText from "../utils/index.css";
 }
