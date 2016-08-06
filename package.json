@@ -2,17 +2,18 @@
   "name": "uiComponents",
   "version": "0.0.1",
   "description": "A set of ui components built in React JS",
-  "main": "index.html",
+  "main": "lib/index.js",
   "scripts": {
     "test": "export NODE_ENV=testing || set NODE_ENV=testing && mocha -w --compilers js:babel-register --require test.setup.js components/**/*.spec.js",
     "start": "webpack-dev-server --progress",
-    "clean": "rm -rf ./build/*",
+    "clean": "rm -rf ./build/* ./lib/*",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:css": "stylelint components/**/*.css components/global.css",
     "lint:js": "eslint components/**/*.js",
     "build": "NODE_ENV=production npm run clean && npm run lint && webpack --config ./webpack.production.config.js --progress",
+    "build:lib": "npm run clean && npm run lint && babel ./index.js ./components --ignore *.spec.js,./components/index.js --out-dir ./lib",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0",
-    "postinstall": "npm run build"
+    "postinstall": "npm run build:lib"
   },
   "pre-commit": [
     "precommit-msg",
